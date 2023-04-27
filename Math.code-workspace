@@ -8,12 +8,5 @@
 		"editor.wordWrap": "on",
 		"explorer.sortOrder": "default",
 		"explorer.excludeGitIgnore": true,
-		"macros": {
-			"key": "cmd+opt+j",
-			"command": "editor.action.insertSnippet",
-			"when": "editorTextFocus",
-			"args": { "snippet": "\\($0\\)" }
-		},
 	}
-
 }
