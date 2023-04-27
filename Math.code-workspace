@@ -5,6 +5,7 @@
 		}
 	],
 	"settings": {
+		"editor.wordWrap": "on",
 		"explorer.sortOrder": "default",
 		"explorer.excludeGitIgnore": true,
 		"macros": {
@@ -12,7 +13,7 @@
 			"command": "editor.action.insertSnippet",
 			"when": "editorTextFocus",
 			"args": { "snippet": "\\($0\\)" }
-		}
+		},
 	}
 
 }
