@@ -8,5 +8,6 @@
 		"editor.wordWrap": "on",
 		"explorer.sortOrder": "default",
 		"explorer.excludeGitIgnore": true,
+		"editor.suggest.snippetsPreventQuickSuggestions": false,
 	}
 }
