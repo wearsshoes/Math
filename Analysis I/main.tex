@@ -17,11 +17,11 @@
 
 % Subfiles
 \usepackage{refcount}
-\usepackage{xr}
+\usepackage{hyperref}
+\usepackage{xr-hyper}
 \usepackage{subfiles} % Best loaded last in the preamble
     
-\graphicspath{{images/}}
-
+%Titlecontent
 \title{Analysis I: Exercises}
 \author{Rachel Shu}
 \date{\today}
@@ -37,6 +37,7 @@
 \setlength{\parindent}{0pt}
 \setlist[enumerate]{label = \textbf{\alph*.}}
 \renewcommand{\thesubsection}{Exercise \arabic{chapter}.\arabic{section}.\arabic{subsection}}
+\hypersetup{colorlinks, linkcolor={blue}}
 
 % TikZ
 \usetikzlibrary{positioning}
@@ -61,7 +62,9 @@
 \chapfilefalse
 
 \maketitle
+
 \tableofcontents
+\newpage
 
 \addtocounter{chapter}{2}
 \subfile{Chapters/3.tex}
