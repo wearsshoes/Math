@@ -4,10 +4,15 @@
 
 \ifmainfile
 \else
-    \maketitle
+    \makeatletter
+    \begin{flushright}
+        \@title \\
+        \@author \\
+        \@date
+    \end{flushright}
     \addtocounter{chapter}{3}
-    \addtocounter{section}{3}
-    \section{Images and inverse images}
+    \addtocounter{section}{4}
+    \section{Cartesian products}
 \fi
 
 \end{document}

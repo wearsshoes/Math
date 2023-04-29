@@ -2,13 +2,25 @@
 
 \begin{document}
 
-\addtocounter{section}{2}
+\ifmainfile
+\else
+    \makeatletter
+    \begin{flushright}
+        \@title \\
+        \@author \\
+        \@date
+    \end{flushright}
+    \addtocounter{chapter}{2}
+    \addtocounter{section}{2}
+    \let\clearpage\relax
+    \chapter{Set Theory}
+    \mainfiletrue
+\fi
+
 \section{Functions}
 \subfile{Chapter 3/3.3.tex}
-\section{Images and inverse images}
+
 \subfile{Chapter 3/3.4.tex}
-\section{Cartesian products}
 \subfile{Chapter 3/3.5.tex}
-\section{Cardinality of sets}
 
 \end{document}
