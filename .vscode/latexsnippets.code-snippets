@@ -45,10 +45,10 @@
 			"\t",
 			"\\begin{proof}",
 			"\t",
+			"\\end{proof}",
 			"\t\\begin{xx}",
 			"\t\t",
 			"\t\\end{xx}",
-			"\\end{proof}",
 		],
 		"description": "Creates template for homework assignments"
 	}

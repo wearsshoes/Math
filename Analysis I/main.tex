@@ -21,14 +21,18 @@
 \author{Rachel Shu}
 \date{\today}
 
+%Global variables
+\newif\ifmainfile
+
 %Formatting
 \geometry{letterpaper, portrait, margin=1in}
 \onehalfspacing
 \setlength{\parskip}{1em}
 \setlength{\parindent}{0pt}
 \setlist[enumerate]{label = \textbf{\alph*.}}
-% \let\clearpage\relax
+\renewcommand{\thesubsection}{Exercise \arabic{chapter}.\arabic{section}.\arabic{subsection}}
 
+% TikZ
 \usetikzlibrary{positioning}
 \usetikzlibrary{fit}
 
@@ -41,29 +45,11 @@
     {\begin{textnormal}{\emph{Answer:}}}
     {\end{textnormal}}
 
-\newenvironment{prf}
-    {\begin{text}{\emph{Proof.}}}
+\newenvironment{xx}
+    {\color{red}\begin{text}{\textbf{Scratchpad:}}}
     {\end{text}}
 
-\newenvironment{xx}
-    {
-        \color{red}
-        \begin{text}
-            {\textbf{Scratchpad:}}
-    }
-    {
-        \end{text}
-    }
-
-% \renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
-% \titleformat{\section}{\normalfont\fontsize{18}{18}\bfseries}{\thesection}{1em}{}
-
-\renewcommand{\thesubsection}{Exercise \arabic{chapter}.\arabic{section}.\arabic{subsection}}
-% \titleformat{\subsection}{\normalfont\fontsize{15}{15}\bfseries}{\thesubsection}{1em}{}
-
-\newif\ifmainfile
-
-
+% Main
 \begin{document}
 \mainfiletrue
 
