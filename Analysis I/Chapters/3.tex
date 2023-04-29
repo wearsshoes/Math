@@ -11,16 +11,16 @@
         \@date
     \end{flushright}
     \addtocounter{chapter}{2}
-    \addtocounter{section}{2}
-    \let\clearpage\relax
-    \chapter{Set Theory}
-    \mainfiletrue
+    \chapfiletrue
 \fi
 
-\section{Functions}
-\subfile{Chapter 3/3.3.tex}
+\begingroup
+\let\clearpage\relax
+\chapter{Set Theory}
+\endgroup
 
+\addtocounter{section}{2}
+\subfile{Chapter 3/3.3.tex}
 \subfile{Chapter 3/3.4.tex}
-\subfile{Chapter 3/3.5.tex}
 
 \end{document}

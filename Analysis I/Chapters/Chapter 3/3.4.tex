@@ -4,17 +4,20 @@
 
 \ifmainfile
 \else
-    \makeatletter
-    \begin{flushright}
-        \@title \\
-        \@author \\
-        \@date
-    \end{flushright}
-    \addtocounter{chapter}{3}
-    \addtocounter{section}{3}
-    \section{Images and inverse images}
+    \ifchapfile
+    \else
+        \addtocounter{chapter}{3}
+        \addtocounter{section}{3}
+        \makeatletter
+        \begin{flushright}
+            \@title \\
+            \@author \\
+            \@date
+        \end{flushright}
+    \fi
 \fi
 
+\section{Images and inverse images}
 \subsection{}
 \begin{q}
     Let $f \colon X \to Y$ be a bijective function, and let $f^{-1} \colon Y \to X$ be its inverse. Let $V$ be any subset of $Y$. Prove that the forward image of $V$ under $f^{-1}$ is the same set as the inverse image of $V$ under $f$; thus the fact that both sets are denoted by $f^{-1}(V)$ will not lead to any inconsistency.
@@ -180,8 +183,6 @@
         
     \end{xx}
 \end{proof}
-    
-
 
 \subsection{}
 \begin{q}

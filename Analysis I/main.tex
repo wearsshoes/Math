@@ -28,6 +28,7 @@
 
 %Global variables
 \newif\ifmainfile
+\newif\ifchapfile
 
 %Formatting
 \geometry{letterpaper, portrait, margin=1in}
@@ -57,13 +58,12 @@
 % Main
 \begin{document}
 \mainfiletrue
+\chapfilefalse
 
 \maketitle
 \tableofcontents
 
 \addtocounter{chapter}{2}
-\chapter{Set Theory}
 \subfile{Chapters/3.tex}
-\chapter{Integers and Rationals}
 
 \end{document}
