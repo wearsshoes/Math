@@ -1,73 +1,10 @@
-\documentclass[parskip]{report}
-\usepackage[utf8]{inputenc}
-\usepackage[]{amsmath}
-\usepackage[]{amssymb}
-\usepackage[]{setspace}
-\usepackage[]{tikz}
-\usepackage[]{xcolor}
-\usepackage[]{enumitem}
-\usepackage{titlesec}
-\usepackage{geometry}
-
-\geometry{letterpaper, portrait, margin=1in}
-
-\usetikzlibrary{positioning}
-\usetikzlibrary{fit}
-
-\onehalfspacing
-\setlength{\parskip}{1em}
-\setlength{\parindent}{0pt}
-\setlist[enumerate]{label = \textbf{\alph*.}}
-
-
-\newenvironment{q}
-    {\begin{bfseries}}
-    {\end{bfseries}}
-
-\newenvironment{ans}
-    {\begin{text}{\textbf{Answer:}}}
-    {\end{text}}
-
-\newenvironment{prf}
-    {\begin{text}{\textbf{Proof:}}}
-    {\end{text}}
-
-\newenvironment{xx}
-    {
-        \color{red}
-        \begin{text}
-            {\textbf{Scratchpad:}}
-    }
-    {
-        \end{text}
-    }
-
-% \courselabel{Analysis I}
-% \student{Rachel Shu}
-% \exercisesheet{Chapter 3.3}{Functions}
-% \school{Analysis I}
-% \semester{}
-% \university{}
-\date{April 27, 2023}
-
-\renewcommand{\thesection}{Section \arabic{chapter}.\arabic{section}}
-\titleformat{\section}{\normalfont\fontsize{18}{18}\bfseries}{\thesection}{1em}{}
-
-\renewcommand{\thesubsection}{Exercise \arabic{chapter}.\arabic{section}.\arabic{subsection}}
-\titleformat{\subsection}{\normalfont\fontsize{15}{15}\bfseries}{\thesubsection}{1em}{}
+\documentclass[../../main.tex]{subfiles}
+\graphicspath{{\subfix{../images/}}}
 
 \begin{document}
 
-\setcounter{chapter}{3}
-
-\setcounter{section}{2}
-\section{Functions}
-
-\setcounter{subsection}{1}
-\subsection{}
-
 \begin{q}
-Let $f : X \to Y$ and $g : Y \to Z$ be functions. Show that if $f$ and $g$ are both injective, then so is $g \circ f$; similarly show that if $f$ and $g$ are both surjective, then so is $g \circ f$.
+    Let $f : X \to Y$ and $g : Y \to Z$ be functions. Show that if $f$ and $g$ are both injective, then so is $g \circ f$; similarly show that if $f$ and $g$ are both surjective, then so is $g \circ f$.
 \end{q}
 
 
@@ -106,7 +43,7 @@ Let $f : X \to Y$ and $g : Y \to Z$ be functions. Show that if $f$ and $g$ are b
     $\square$
 \end{prf}
 
-\stepcounter{subsection}
+% \stepcounter{subsection}
 \subsection{}
 \begin{q}
 Let $f: X \to Y$ and $g: Y \to Z$ be functions.
@@ -317,7 +254,7 @@ Let $f: X \to Y$ and $g: Y \to Z$ be functions.
                 g(a) & \text{if } a \in Y
             \end{cases}
         \)
-        \\
+
     
         Using this $h$, suppose $h \circ \iota_{X \to X \cup Y}$.
         Since $h: X \cup Y \to Z$ and $\iota_{X \to X \cup Y}: X \to X \cup Y$, their composition $h \circ \iota_{X \to X \cup Y}$ is a function from $X \to Z$. 

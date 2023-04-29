@@ -1,0 +1,74 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{blindtext}
+\usepackage[utf8]{inputenc}
+\usepackage[]{amsmath}
+\usepackage[]{amssymb}
+\usepackage[]{setspace}
+\usepackage[]{tikz}
+\usepackage[]{xcolor}
+\usepackage[]{enumitem}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{subfiles} % Best loaded last in the preamble
+
+\graphicspath{{images/}}
+
+\title{Analysis I}
+\author{Rachel Shu}
+\date{\today}
+
+\geometry{letterpaper, portrait, margin=1in}
+
+\usetikzlibrary{positioning}
+\usetikzlibrary{fit}
+
+\onehalfspacing
+\setlength{\parskip}{1em}
+\setlength{\parindent}{0pt}
+\setlist[enumerate]{label = \textbf{\alph*.}}
+
+\newenvironment{q}
+    {\begin{bfseries}}
+    {\end{bfseries}}
+
+\newenvironment{ans}
+    {\begin{text}{\textbf{Answer:}}}
+    {\end{text}}
+
+\newenvironment{prf}
+    {\begin{text}{\textbf{Proof:}}}
+    {\end{text}}
+
+\newenvironment{xx}
+    {
+        \color{red}
+        \begin{text}
+            {\textbf{Scratchpad:}}
+    }
+    {
+        \end{text}
+    }
+
+% \courselabel{Analysis I}
+% \student{Rachel Shu}
+% \exercisesheet{Chapter 3.3}{Functions}
+% \school{Analysis I}
+% \semester{}
+% \university{}
+
+% \renewcommand{\thesection}{Section \arabic{chapter}.\arabic{section}}
+% \titleformat{\section}{\normalfont\fontsize{18}{18}\bfseries}{\thesection}{1em}{}
+
+% \renewcommand{\thesubsection}{Exercise \arabic{chapter}.\arabic{section}.\arabic{subsection}}
+% \titleformat{\subsection}{\normalfont\fontsize{15}{15}\bfseries}{\thesubsection}{1em}{}
+
+\begin{document}
+
+\maketitle
+
+\chapter{3.3}
+
+\subfile{Chapters/Chapter 3/3.3.tex}
+
+\end{document}
