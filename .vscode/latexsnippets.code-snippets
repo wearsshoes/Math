@@ -16,8 +16,8 @@
 	// 	"description": "Log output to console"
 	// }
 	
-	"Assignment with subproblems":{
-		"prefix": "subproblem",
+	"Exercise with subproblems":{
+		"prefix": "subproblems",
 		"body": [
 			"\\subsection{}",
 			"\\begin{q}",
@@ -32,7 +32,7 @@
 		],
 		"description": "Template for problem with subproblems"
 	},
-	"Assignment Template": {
+	"Exercise Template": {
 		"prefix": "problem",
 		"body": [
 			"\\begin{q}",
@@ -50,6 +50,25 @@
 			"\t\t",
 			"\t\\end{xx}",
 		],
+		"description": "Creates template for homework assignments"
+	},
+	"Assignment Template": {
+		"prefix": ["newdoc", "assignment"],
+		"body": [
+			"\\documentclass[../../main.tex]{subfiles}",
+			"",
+			"\\begin{document}",
+			"",
+			"\\ifmainfile",
+			"\\else",
+			"\t\\maketitle",
+			"\t\\addtocounter{chapter}{}",
+			"\t\\addtocounter{section}{}",
+			"\t\\section{}",
+			"\\fi",
+			"",
+			"\\end{document}"
+		  ],
 		"description": "Creates template for homework assignments"
 	}
 }
