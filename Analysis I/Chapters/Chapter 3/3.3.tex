@@ -3,6 +3,16 @@
 
 \begin{document}
 
+\ifmainfile
+\else
+    \maketitle
+    \addtocounter{chapter}{3}
+    \addtocounter{section}{2}
+    \section{Functions}
+\fi
+
+
+\subsection{}
 \begin{q}
     Let $f : X \to Y$ and $g : Y \to Z$ be functions. Show that if $f$ and $g$ are both injective, then so is $g \circ f$; similarly show that if $f$ and $g$ are both surjective, then so is $g \circ f$.
 \end{q}
@@ -43,7 +53,7 @@
     $\square$
 \end{prf}
 
-% \stepcounter{subsection}
+\stepcounter{subsection}
 \subsection{}
 \begin{q}
 Let $f: X \to Y$ and $g: Y \to Z$ be functions.
@@ -255,7 +265,6 @@ Let $f: X \to Y$ and $g: Y \to Z$ be functions.
             \end{cases}
         \)
 
-    
         Using this $h$, suppose $h \circ \iota_{X \to X \cup Y}$.
         Since $h: X \cup Y \to Z$ and $\iota_{X \to X \cup Y}: X \to X \cup Y$, their composition $h \circ \iota_{X \to X \cup Y}$ is a function from $X \to Z$. 
         Thus it has the same type as $f$.

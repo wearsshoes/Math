@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[notitlepage]{report}
 \usepackage{graphicx}
 \usepackage{blindtext}
 \usepackage[utf8]{inputenc}
@@ -10,24 +10,28 @@
 \usepackage[]{enumitem}
 \usepackage{titlesec}
 \usepackage{geometry}
+\usepackage{refcount}
+\usepackage{xr}
 \usepackage{subfiles} % Best loaded last in the preamble
-
+    
 \graphicspath{{images/}}
 
-\title{Analysis I}
+\title{Analysis I: Exercises}
 \author{Rachel Shu}
 \date{\today}
 
+%Formatting
 \geometry{letterpaper, portrait, margin=1in}
-
-\usetikzlibrary{positioning}
-\usetikzlibrary{fit}
-
 \onehalfspacing
 \setlength{\parskip}{1em}
 \setlength{\parindent}{0pt}
 \setlist[enumerate]{label = \textbf{\alph*.}}
+% \let\clearpage\relax
 
+\usetikzlibrary{positioning}
+\usetikzlibrary{fit}
+
+% Environments
 \newenvironment{q}
     {\begin{bfseries}}
     {\end{bfseries}}
@@ -50,25 +54,26 @@
         \end{text}
     }
 
-% \courselabel{Analysis I}
-% \student{Rachel Shu}
-% \exercisesheet{Chapter 3.3}{Functions}
-% \school{Analysis I}
-% \semester{}
-% \university{}
-
-% \renewcommand{\thesection}{Section \arabic{chapter}.\arabic{section}}
+% \renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
 % \titleformat{\section}{\normalfont\fontsize{18}{18}\bfseries}{\thesection}{1em}{}
 
-% \renewcommand{\thesubsection}{Exercise \arabic{chapter}.\arabic{section}.\arabic{subsection}}
+\renewcommand{\thesubsection}{Exercise \arabic{chapter}.\arabic{section}.\arabic{subsection}}
 % \titleformat{\subsection}{\normalfont\fontsize{15}{15}\bfseries}{\thesubsection}{1em}{}
 
+\newif\ifmainfile
+
+
 \begin{document}
+\mainfiletrue
 
 \maketitle
+\tableofcontents
 
-\chapter{3.3}
+\addtocounter{chapter}{2}
+\chapter{Set Theory}
 
+\addtocounter{section}{2}
+\section{Functions}
 \subfile{Chapters/Chapter 3/3.3.tex}
 
 \end{document}
