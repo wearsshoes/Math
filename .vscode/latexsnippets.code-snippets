@@ -19,7 +19,7 @@
 	"Assignment with subproblems":{
 		"prefix": "subproblem",
 		"body": [
-			"\\section*{}",
+			"\\subsection{}",
 			"\\begin{q}",
 			"\t$1",
 			"\\end{q}",
