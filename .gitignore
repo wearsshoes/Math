@@ -6,3 +6,4 @@
 **/*.sta
 **/*.toc
 **/*.DS_Store
+**/*.out
