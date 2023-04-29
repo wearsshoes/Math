@@ -15,20 +15,41 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
-	"Format a problem": {
-		"scope": "LaTeX,tex",
-		"prefix": "que",
+	
+	"Assignment with subproblems":{
+		"prefix": "subproblem",
+		"body": [
+			"\\section*{}",
+			"\\begin{q}",
+			"\t$1",
+			"\\end{q}",
+			"\\begin{enumerate}",
+			"\t\\item",
+			"\t\t$2",
+			"\t\\item",
+			"\t\t$3",
+			"\\end{enumerate}"
+		],
+		"description": "Template for problem with subproblems"
+	},
+	"Assignment Template": {
+		"prefix": "problem",
 		"body": [
 			"\\begin{q}",
-			"$0",
+			"\t$0",
 			"\\end{q}",
+			"",
 			"\\begin{ans}",
-			"Proof:",
+			"\t",
 			"\\end{ans}",
-			"\\begin{xx}",
-			"Scratchpad",
-			"\\end{xx}"
+			"\t",
+			"\\begin{proof}",
+			"\t",
+			"\t\\begin{xx}",
+			"\t\t",
+			"\t\\end{xx}",
+			"\\end{proof}",
 		],
-		"description": "Creates latex environments for homework problems"
+		"description": "Creates template for homework assignments"
 	}
 }
