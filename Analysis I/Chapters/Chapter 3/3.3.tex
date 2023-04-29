@@ -18,7 +18,7 @@
 \end{q}
 
 
-\begin{prf}
+\begin{proof}
     Suppose $f$ and $g$ are injective.
     We need to show that for each $x$ and $x'$ in $X$, $x \neq x'$ implies $(g \circ f)(x) \neq (g \circ f)(x')$.
     The assumption that $f$ is injective tells us that for every $x$ and $x'$ in $X$, $x \neq x' \implies f(x) \neq f(x')$.
@@ -28,8 +28,8 @@
     Now suppose $f$ and $g$ are surjective.
     We need to show that for each $z$ in $Z$, there exists $x$ in $X$ such that $(g \circ f)(x)=z$.
     The assumption that $f$ is surjective tells us that for each $y$ in $Y$, there exists $x$ in $X$ such that $f(x)=y$.
-    Since each $f(x)$ is in $Y$, the assumption that $g$ is surjective tells us that for each $z$ in $Z$, there exists $f(x)$ in $Y$, and thus $x$ in $X$, such that $g(f(x))=z$. Then for each $z$ in $Z$, there exists $x$ in $X$ such that $(g \circ f)(x)=z$, as desired. $\square$
-\end{prf}
+    Since each $f(x)$ is in $Y$, the assumption that $g$ is surjective tells us that for each $z$ in $Z$, there exists $f(x)$ in $Y$, and thus $x$ in $X$, such that $g(f(x))=z$. Then for each $z$ in $Z$, there exists $x$ in $X$ such that $(g \circ f)(x)=z$, as desired. 
+\end{proof}
 
 \subsection{}
 \begin{q}
@@ -40,7 +40,7 @@
     The empty function is only bijective into the empty set.
 \end{ans}
 
-\begin{prf}
+\begin{proof}
     For the empty function to be injective into a given set, for each $x$ and $x'$ in $\emptyset$, $x \neq x'$ implies $empty(x) \neq empty(x')$.
     This is vacuously true as neither $x$ nor $x'$ exist.
     Thus the empty function is injective into all sets.
@@ -50,8 +50,7 @@
     Thus the empty function is only surjective onto the empty set, when it is vacuously true.
     
     For the empty function to be bijective into a given set, it must be injective into and surjective onto that set. Since the empty function is only surjective onto the empty set, it is only bijective into the empty set.
-    $\square$
-\end{prf}
+\end{proof}
 
 \stepcounter{subsection}
 \subsection{}
@@ -65,13 +64,12 @@ Let $f: X \to Y$ and $g: Y \to Z$ be functions.
         Show that if $g \circ f$ is injective, then $f$ must be injective.
     \end{q}
 
-    \begin{prf}
+    \begin{proof}
         For the sake of contradiction suppose $g \circ f$ is injective but $f$ is not.
         Then there exists some $x$ and $x'$ in $X$ that go to the same $y$ in $Y$.
         By the definition of a function, when we apply $g$ each $y$ in Y goes to exactly one $z$ in Z, so when we apply $g \circ f$, any $x$ and $x'$ that go to the same $y$ go to the same $z$, which contradicts the assumption that $g \circ f$ is injective.
         Thus if $g \circ f$ is injective $f$ must also be.
-        $\square$
-    \end{prf}
+    \end{proof}
 
     \item
     \begin{q}
@@ -82,20 +80,19 @@ Let $f: X \to Y$ and $g: Y \to Z$ be functions.
      No.
    \end{ans}
 
-    \begin{prf}
+    \begin{proof}
         A counterexample shows that $g$ is not necessarily injective when $(g \circ f)$ is.
         Suppose $X$ is the empty set, $Y$ is $\mathbb{N}$, $Z$ is $\mathbb{N}$, and suppose $g$ is the function $x \mapsto 0$.
         We can see $g$ is not injective from $Y$ to $Z$. (To pick one counterexample, $g(1)$ and $g(2)$ are equal.)
         But since any function from $\emptyset$ is an empty function, which is injective, $(g \circ f)(x)$ is injective.
-        $\square$
-    \end{prf}
+    \end{proof}
 
     \item
     \begin{q}
         Show that if $g \circ f$ is surjective, then $g$ must be surjective.
     \end{q}
 
-    \begin{prf}
+    \begin{proof}
         For the sake of contradiction, suppose $g \circ f$ is surjective but $g$ is not.
         If $g$ is not surjective, there exists some $z$ in $Z$ for which there is no $y$ in $Y$ such that $g(y)=z$.
         Then as all $f(x)$ are in $Y$ there is also no $f(x)$ such that $g(f(x))=z$.
@@ -103,8 +100,7 @@ Let $f: X \to Y$ and $g: Y \to Z$ be functions.
         So there is some $z$ in $Z$ for which there is no $x$ in $x$ such that $g(f(x))=z$.
         But this contradicts our supposition that $g \circ f$ is surjective.
         Thus if $g \circ f$ is surjective then $g$ is too.
-        $\square$
-    \end{prf}
+    \end{proof}
 
     \item
     \begin{q}
@@ -117,7 +113,7 @@ Let $f: X \to Y$ and $g: Y \to Z$ be functions.
 
     % (informal) A function g(y) can still be surjective even if multiple inputs go to the same output. if for each output, at least one input's input exists, then g(f(x)) is true. but the other inputs might not have inputs, so f(x) is not necessarily true (and I don't know what to do with not necessarily true cases).
 
-    \begin{prf}
+    \begin{proof}
     To provide a counterexample, let $g: Y \to Z$ be a function which is surjective but for which there is some $y \in Y$ and some $y' \in Y$ such that for some $z'$ in $Z$, $z'=g(y)=g(y')$, i.e. $g$ is not injective.
     Also let $f: X \to Y$ be a function for which there is some $x$ such that $f(x)=y$ for all $y \in Y$ except $y'$, in which case $f$ is not surjective (but would be if $y'$ were left out).
     See the diagram below for one example of such a function:
@@ -156,12 +152,11 @@ Let $f: X \to Y$ and $g: Y \to Z$ be functions.
     In particular, for the $z'$ which is equal to $g(y')$, since it is also equal to $g(y)$, and $f(x)=y$ for all $y \in Y$ except $y'$, there is some $x$ for which $(g \circ f)(x)=z'$.
 
     Thus it is not the case that if $f$ is not surjective that $(g \circ f)$ is also not, or to remove the contrapositive, it is not the case that if $(g \circ f)$ is surjective that $f$ is also.
-    $\square$
-\end{prf}
+\end{proof}
 \end{enumerate}
 
 \addtocounter{subsection}{2}
-\subsection{}
+\subsection{}\label{inclusionmap}
 
 \begin{q}
     If $X$ is a subset of $Y$, let $\iota_{X\to Y} : X \to Y$ be \emph{the inclusion map from $X$ to $Y$}, defined by mapping $x \mapsto x$ for all $x \in X$, i.e., $\iota_{X\to Y}(x) := x$ for all $x \in X$.
@@ -173,7 +168,7 @@ Let $f: X \to Y$ and $g: Y \to Z$ be functions.
         If $X \subseteq Y \subseteq Z$ then $\iota_{Y\to Z} \circ \iota_{X\to Y} = \iota_{X\to Z}$.
     \end{q}
 
-    \begin{prf}
+    \begin{proof}
         To prove equality, we need to show the domains and codomains of $\iota_{Y\to Z} \circ \iota_{X\to Y}$ and $\iota_{X\to Z}$ agree, and that for all $x$ in their common domain $\iota_{Y\to Z} \circ \iota_{X\to Y}(x) = \iota_{X\to Z}(x)$.
 
         Let $X \subseteq Y \subseteq Z$. Since $X \subseteq Y$, $\iota_{X\to Y}: X \to Y$ and since $Y \subseteq Z$, $\iota_{Y\to Z}: Y \to Z$, by the definition of composition (Definition 3.3.13) $\iota_{Y\to Z} \circ \iota_{X\to Y}: X \to Z$. Likewise, since $X \subseteq Z$, $\iota_{X\to Z}: X \to Z$, thus the codomains of the two functions agree.
@@ -183,15 +178,14 @@ Let $f: X \to Y$ and $g: Y \to Z$ be functions.
         Likewise, since $X \subseteq Z$, $\iota_{X\to Z}(x) := x$ for all $X$.Thus for all $x \in X$, the output of $\iota_{Y\to Z}(\iota_{X\to Y}(x))$ is equal to the output of $\iota_{X\to Z}(x)$.
 
         Therefore the two functions are equal.
-        $\square$
-    \end{prf}
+    \end{proof}
 
     \item 
     \begin{q}
         Show that if $f: A \to B$ is any function, then $f = f \circ \iota_{A \to A} = \iota_{B \to B} \circ f$.
     \end{q}
 
-    \begin{prf}
+    \begin{proof}
         To prove equality, we need to show the domains and codomains of $f$, $f \circ \iota_{A \to A}$, and $\iota_{B \to B} \circ f$ all agree, and that for all $x$ in their common domain, $f(x) = f \circ \iota_{A \to A}(x) = \iota_{B \to B} \circ f(x)$.
 
         Let $f: A \to B$ be any function from $A$ to $B$.
@@ -212,15 +206,14 @@ Let $f: X \to Y$ and $g: Y \to Z$ be functions.
         Thus for every element $a \in A$, for some element $b \in B$ we yet again have $\iota_{B \to B} \circ f(a)=b$.
 
         Thus the outputs are all equal, and the two functions are equal.
-        $\square$
-    \end{prf}
+    \end{proof}
 
     \item 
     \begin{q}
         Show that if $f: A \to B$ is a bijective function, then $f \circ f^{-1} = \iota_{B \to B}$ and $f^{-1} \circ f = \iota_{A \to A}$.
     \end{q}
 
-    \begin{prf}
+    \begin{proof}
         The axiom of set equality states that
         \begin{equation*}
                 f: X \to Y
@@ -243,8 +236,7 @@ Let $f: X \to Y$ and $g: Y \to Z$ be functions.
         Since $f$ is bijective, for all $a \in A$, there exists exactly one $b \in B$ such that $f \; a \mapsto b$. We defined $f^{-1}$ as the function $b \mapsto a$. Then $f \circ f^{-1}$ is the function $(b \mapsto a) \mapsto b$, in other words $f \circ f^{-1}(b)=b$. We also know $\iota_{B \to B}(b)=b$. Thus $f \circ f^{-1} = \iota_{B \to B}$.
 
         The other part is very similar. $f^{-1} \circ f$ is a function from $A \to A$, which we also know is true of $\iota_{A \to A}$. Then $f^{-1} \circ f$ is the function $(a \mapsto b) \mapsto a$,in other words $f^{-1} \circ f(a)=a$. Likewise $\iota_{A \to A}(a)=a$. Thus $f^{-1} \circ f = \iota_{A \to A}$, and we have completed our proof.
-        $\square$
-    \end{prf}
+    \end{proof}
 
     \item 
     \begin{q}
@@ -252,11 +244,11 @@ Let $f: X \to Y$ and $g: Y \to Z$ be functions.
     \end{q}
 
     
-    \begin{prf}
+    \begin{proof}
         Let $X$ and $Y$ be disjoint sets, and $f: X \to Z$ and $g: Y \to Z$ be functions.
         We need to show that there is some function $h: X \cup Y \to Z$ which satisfies $h \circ \iota_{X \to X \cup Y} = f$ and $h \circ \iota_{Y \to X \cup Y} = g$, and then show that it is unique.
     
-        By pairwise union, (Axiom 3.5) there exists $X \cup Y$. By the definition of disjunction, $X$ and $Y$ have no common elements, so $a \in X \cup Y$ is exclusively in $X$ xor $Y$. Thus we can construct the following:
+        By pairwise union, (Axiom 3.5) there exists $X \cup Y$. By the definition of disjunction, $X$ and $Y$ have no common elements, so $a \in X \cup Y$ is exclusively in $X$ or $Y$. Thus we can construct the following:
     
         Let $h: X \cup Y \to Z$ = \(
             \begin{cases}
@@ -267,40 +259,46 @@ Let $f: X \to Y$ and $g: Y \to Z$ be functions.
 
         Using this $h$, suppose $h \circ \iota_{X \to X \cup Y}$.
         Since $h: X \cup Y \to Z$ and $\iota_{X \to X \cup Y}: X \to X \cup Y$, their composition $h \circ \iota_{X \to X \cup Y}$ is a function from $X \to Z$. 
-        Thus it has the same type as $f$.
+        Thus it has the same domain and codomain as $f$.
         For all $x \in X$, $\iota_{X \to X \cup Y}(x)=x$.
         This means $h \circ \iota_{X \to X \cup Y}(x) = h(x)$. Since $x$ in $X$, $h(x) = f(x)$.
         Therefore we have satisfied both conditions to prove $h \circ \iota_X \to X \cup Y = f$.
 
         Likewise, suppose $h \circ \iota_{Y \to X \cup Y}$.
         Since $h: X \cup Y \to Z$ and $\iota_{Y \to X \cup Y}: Y \to X \cup Y$, their composition $h \circ \iota_{Y \to X \cup Y}$ is a function from $Y \to Z$. 
-        Thus it has the same type as $g$.
+        Thus it has the same domain and codomain as $g$.
         For all $y \in Y$, $\iota_{Y \to X \cup Y}(y)=y$.
         This means $h \circ \iota_{Y \to X \cup Y}(y) = h(y)$. Since $y$ in $Y$, $h(y) = g(y)$.
         Now we have also satisfied both conditions to prove $h \circ \iota_X \to X \cup Y = g$.
-    \end{prf}
 
-    \begin{xx}
-        We now prove uniqueness by contradiction.
-        Suppose $h: X \cup Y \to Z$ is not unique.
-        Then there exists some $h': X \cup Y \to Z$ such that $h \neq h'$ and yet both $h' \circ \iota_{X \to X \cup Y} = f$ and $h' \circ \iota_{Y \to X \cup Y} = g$ as well.
-        We know that the domains and codomains are the same.
-        hmm this seems wrong.
-    \end{xx}
+        We now prove uniqueness.
+        Suppose there exists another function $h: X \cup Y \to Z$ and $h': X \cup Y \to Z$ such that $h' \circ \iota_{X \to X \cup Y} = f$ and $h' \circ \iota_{Y \to X \cup Y} = g$ as well.
+        We know that the domains and codomains of $h$ and $h'$ are the same.
 
+        Since $h' \circ \iota_{X \to X \cup Y} = f$, and $\iota_{X \to X \cup Y}$ is an inclusion map, $h'=f$ for all $x \in X$. Likewise since $h' \circ \iota_{Y \to X \cup Y} = g$, and $\iota_{Y \to X \cup Y}$ is an inclusion map, $h'=g$ for all $y \in Y$. This means $h'$ has the same value as $h$ for $a \in X \cup Y$, so they are identical and $h$ is unique.
+    \end{proof}
 
     \item \begin{q}
         Show that the hypothesis that $X$ and $Y$ are disjoint can be dropped in (d) if one adds the additional hypothesis that $f(x) = g(x)$ for all $x \in X \cap Y$.
     \end{q}
 
-    \begin{prf}
-        
-    \end{prf}
-
-    \begin{xx}
-        
-    \end{xx}
-
+    \begin{proof}
+       Suppose $f(x)=g(x)$ for all $x \in X \cap Y$, and $X$ and $Y$ are not disjoint. If the relation
+        \begin{equation*}
+            h: X \cup Y \to Z =
+            \begin{cases}
+                f(x) & \text{if } x \in X \\
+                g(x) & \text{if } x \in Y
+            \end{cases}
+        \end{equation*}
+        is a function, it satisfies the conditions in \ref*{inclusionmap}.d. A relation $h$ is a function if and only if each $x$ only has one corresponding $h(x)$. We previously required that $x$ be exclusively in $X$ or $Y$, which meant that $f(x)$ and $g(x)$ were never defined for the same $x$. We check if it is still a function under our current assumption. If $x$ in $X \cup Y$, then one of the three following hold:
+        \begin{enumerate}
+            \item $x \in X; x \notin Y$
+            \item $x \in Y; x \notin X$
+            \item $x \in X \cap Y$
+        \end{enumerate}
+        If cases \textbf{a} or \textbf{b}, then $h$ is a function because either $f(x)$ is defined or $g(x)$ is, but not both, as before. If case \textbf{c}, since we have assumed $f(x) = g(x)$ for all $x \in X \cap Y$, we know $h(x)=f(x)=g(x)$ and therefore $h$ has only one value. Thus in all cases $h$ is a function.
+    \end{proof}
 \end{enumerate}
         
 \end{document}
