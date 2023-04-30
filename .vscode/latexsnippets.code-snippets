@@ -76,5 +76,15 @@
 			"\\end{document}"
 		  ],
 		"description": "Creates template for homework assignments"
+	},
+	"Subproof": {
+	"prefix": ["lxl","suppose", "subproof"],
+		"body": [
+			"Suppose",
+			"\\begin{lxl}",
+			"\t\\item",
+			"\\end{lxl}"
+		  ],
+		"description": "Makes a subproof"
 	}
 }

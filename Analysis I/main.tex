@@ -6,6 +6,7 @@
 \usepackage[]{setspace}
 \usepackage[]{enumitem}
 \usepackage[]{xcolor}
+\usepackage[normalem]{ulem}
 
 % Math
 \usepackage[fleqn]{mathtools}
@@ -30,15 +31,15 @@
 \newif\ifmainfile
 \newif\ifchapfile
 \definecolor{lxlcolor}{rgb}{0.7, 0.7, 0.7}
-\newcommand\Set[2]{\{\,#1\mid#2\,\}}
+\newcommand{\Set}[2]{\{\,#1\mid#2\,\}}
 \newcommand{\why}[1]{\hfill\begingroup\color{lxlcolor}{#1}\endgroup}
+\renewcommand{\thesubsection}{Exercise \arabic{chapter}.\arabic{section}.\arabic{subsection}}
 
 %Formatting
 \geometry{letterpaper, portrait, margin=1in}
 \onehalfspacing
 \setlength{\parskip}{1em}
 \setlength{\parindent}{0pt}
-\renewcommand{\thesubsection}{Exercise \arabic{chapter}.\arabic{section}.\arabic{subsection}}
 \hypersetup{colorlinks, linkcolor={blue}}
 
 %Exercise subproblems
@@ -61,7 +62,7 @@
     {\end{bfseries}}
 
 \newenvironment{ans}
-    {\begin{textnormal}{\emph{Answer:}}}
+    {\begin{textnormal}{\emph{Answer.}}}
     {\end{textnormal}}
 
 \newenvironment{xx}

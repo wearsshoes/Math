@@ -4,15 +4,161 @@
 
 \ifmainfile
 \else
-    \makeatletter
-    \begin{flushright}
-        \@title \\
-        \@author \\
-        \@date
-    \end{flushright}
-    \addtocounter{chapter}{3}
-    \addtocounter{section}{4}
-    \section{Cartesian products}
+    \ifchapfile
+    \else
+        \addtocounter{chapter}{3}
+        \addtocounter{section}{4}
+        \makeatletter
+        \begin{flushright}
+            \@title \\
+            \@author \\
+            \@date
+        \end{flushright}
+    \fi
 \fi
+
+\section{Cartesian Products}
+
+\addtocounter{subsection}{1}
+\subsection{}
+\begin{q}
+    Suppose we define an ordered $n$-tuple to be a surjective function $x : {i \in \mathbb{N} : 1 \leq i \leq n} \to X$ whose codomain is some arbitrary set $X$ (so different ordered $n$-tuples are allowed to have different ranges); we then write $x_i$ for $x(i)$ and also write $x$ as $(x_i){1 \leq i \leq n}$. Using this definition, verify that we have $(x_i){1 \leq i \leq n} = (y_i){1 \leq i \leq n}$ if and only if $x_i = y_i$ for all $1 \leq i \leq n$. 
+\end{q}
+
+\begin{proof}
+
+\end{proof}
+\begin{xx}
+    
+\end{xx}
+
+\begin{q}
+    Also, show that if $(X_i){1 \leq i \leq n}$ are an ordered $n$-tuple of sets, then the Cartesian product, as defined in Definition 3.5.6, is indeed a set. (Hint: use Exercise 3.4.7 and the axiom of specification.)
+\end{q}
+
+\begin{proof}
+
+\end{proof}
+\begin{xx}
+    
+\end{xx}
+
+\addtocounter{subsection}{1}
+\subsection{}
+\begin{q}
+    Let $A, B, C$ be sets. Show that: 
+    \begin{enumerate}
+        \item $A \times (B \cup C) = (A \times B) \cup (A \times C)$,
+        \begin{proof}
+    
+        \end{proof}
+        \begin{xx}
+            
+        \end{xx}        
+        \item $A \times (B \cup C) = (A \times B) \cup (A \times C)$, $A \times (B \cap C) = (A \times B) \cap (A \times C)$,
+        \begin{proof}
+    
+        \end{proof}
+        \begin{xx}
+            
+        \end{xx}        
+        \item  and $A \times (B\setminus C) = (A \times B)\setminus(A \times C)$. (One can of course prove similar identities in which the roles of the left and right factors of the Cartesian product are reversed.)
+        \begin{proof}
+    
+        \end{proof}
+        \begin{xx}
+            
+        \end{xx}        
+    \end{enumerate}    
+\end{q}
+
+\addtocounter{subsection}{2}
+\subsection{}
+\begin{q}
+    Let $X$ and $Y$ be sets, and let $\pi_{X\times Y\to X} : X \times Y \to X$ and $\pi_{X\times Y\to Y} : X \times Y \to Y$ be the maps $\pi_{X\times Y\to X}(x, y) := x$ and $\pi_{X\times Y\to Y}(x, y) := y$; these maps are known as the coordinate functions on $X\times Y$. Show that for any functions $f : Z \to X$ and $g : Z \to Y$, there exists a unique function $h : Z \to X \times Y$ such that $\pi_{X\times Y\to X} \circ h = f$ and $\pi_{X\times Y\to Y} \circ h = g$. (Compare this to the last part of Exercise 3.3.8, and to Exercise 3.1.7.) This function $h$ is known as the pairing of $f$ and $g$ and is denoted $h = (f, g)$.
+\end{q}
+
+\begin{proof}
+    
+\end{proof}
+\begin{xx}
+    
+\end{xx}
+
+\subsection{}
+\begin{q}
+    Let $X_1, \ldots, X_n$ be sets. Show that the Cartesian product $\prod_{i=1}^n X_i$ is empty if and only if at least one of the $X_i$ is empty.
+\end{q}
+
+\begin{proof}
+    
+\end{proof}
+\begin{xx}
+    
+\end{xx}
+
+\subsection{}
+\begin{q}
+    Suppose that $I$ and $J$ are two sets, and for all $\alpha \in I$ let $A_{\alpha}$ be a set, and for all $\beta \in J$ let $B_{\beta}$ be a set. Show that
+        \[
+        \left(\bigcup_{\alpha \in I} A_{\alpha}\right) \cap \left(\bigcup_{\beta \in J} B_{\beta}\right) = \bigcup_{(\alpha, \beta) \in I \times J} \left(A_{\alpha} \cap B_{\beta}\right).
+        \]
+\end{q}
+
+\begin{proof}
+    
+\end{proof}
+\begin{xx}
+    
+\end{xx}
+        
+\begin{q}
+    What happens if one interchanges all the union and intersection symbols here?
+\end{q}
+
+\begin{ans}
+    
+\end{ans}
+    
+\begin{proof}
+    
+\end{proof}
+\begin{xx}
+    
+\end{xx}
+
+\subsection{}
+\begin{q}
+    If $f : X \to Y$ is a function, define the graph of $f$ to be the subset of $X \times Y$ defined by $\{(x, f(x)) : x \in X\}$.
+
+        \begin{enumerate}
+        \item Show that two functions $f : X \to Y$, $\tilde{f} : X \to Y$ are equal if and only if they have the same graph.
+        \begin{proof}
+            
+        \end{proof}
+        \begin{xx}
+            
+        \end{xx}
+
+        \item Conversely, if $G$ is any subset of $X \times Y$ with the property that for each $x \in X$, the set $\{y \in Y : (x, y) \in G\}$ has exactly one element (or in other words, $G$ obeys the vertical line test), show that there is exactly one function $f : X \to Y$ whose graph is equal to $G$.
+            
+        \begin{proof}
+            
+        \end{proof}
+        \begin{xx}
+            
+        \end{xx}
+
+        \item Suppose we define a function $f$ to be an ordered triple $f = (X, Y, G)$, where $X, Y$ are sets, and $G$ is a subset of $X \times Y$ that obeys the vertical line test. We then define the domain of such a triple to be $X$, the codomain to be $Y$ and for every $x \in X$, we define $f(x)$ to be the unique $y \in Y$ such that $(x, y) \in G$. Show that this definition is compatible with Definition 3.3.1 in the sense that every choice of domain $X$, codomain $Y$, and property $P(x, y)$ obeying the vertical line test produces a function as defined here that obeys all the properties required of it in that definition, and is also similarly compatible with Definition 3.3.8.
+            
+        \begin{proof}
+            
+        \end{proof}
+        \begin{xx}
+            
+        \end{xx}
+
+        \end{enumerate}
+\end{q}
 
 \end{document}
