@@ -12,8 +12,6 @@
 \usepackage[fleqn]{mathtools}
 \usepackage[]{amssymb}
 \usepackage[]{amsthm}
-
-% Graphs
 \usepackage[]{tikz}
 
 % Subfiles
@@ -27,46 +25,44 @@
 \author{Rachel Shu}
 \date{\today}
 
-%Global variables
-\newif\ifmainfile
-\newif\ifchapfile
-\definecolor{lxlcolor}{rgb}{0.7, 0.7, 0.7}
-\newcommand{\Set}[2]{\{\,#1\mid#2\,\}}
-\newcommand{\why}[1]{\hfill\begingroup\color{lxlcolor}{#1}\endgroup}
-\renewcommand{\thesubsection}{Exercise \arabic{chapter}.\arabic{section}.\arabic{subsection}}
+%Global variables and scripts
+\input{scripts.tex}
 
 %Formatting
-\geometry{letterpaper, portrait, margin=1in}
-\onehalfspacing
-\setlength{\parskip}{1em}
-\setlength{\parindent}{0pt}
-\hypersetup{colorlinks, linkcolor={blue}}
 
-%Exercise subproblems
-\setlist[enumerate, 1]{label = \textbf{\alph*.}}
+    %General
+    \geometry{letterpaper, portrait, margin=1in}
+    \onehalfspacing
+    \setlength{\parskip}{1em}
+    \setlength{\parindent}{0pt}
+    \hypersetup{colorlinks, linkcolor={blue}}
 
-%Line-by-line solutions
-\newlist{lxl}{enumerate}{3}
-\setlist[lxl]{nosep, labelsep=2em, labelwidth=0em}
-\setlist[lxl, 1]{label=\color{lxlcolor}\arabic{lxli}.}
-\setlist[lxl, 2]{label=\color{lxlcolor}\arabic{lxli}.\arabic{lxlii}.}
-\setlist[lxl, 3]{label=\color{lxlcolor}\arabic{lxli}.\arabic{lxlii}.\arabic{lxliii}.}
+    %Exercise subproblems
+    \setlist[enumerate, 1]{label = \textbf{\alph*.}}
 
-% TikZ
-\usetikzlibrary{positioning}
-\usetikzlibrary{fit}
+    %Line-by-line solutions
+    \newlist{lxl}{enumerate}{3}
+    \setlist[lxl]{nosep, labelsep=2em, labelwidth=0em}
+    \setlist[lxl, 1]{label=\color{lxlcolor}\arabic{lxli}.}
+    \setlist[lxl, 2]{label=\color{lxlcolor}\arabic{lxli}.\arabic{lxlii}.}
+    \setlist[lxl, 3]{label=\color{lxlcolor}\arabic{lxli}.\arabic{lxlii}.\arabic{lxliii}.}
+
+    % TikZ
+    \usetikzlibrary{positioning}
+    \usetikzlibrary{fit}
 
 % Environments
-\newenvironment{q}
-    {\begin{bfseries}}
-    {\end{bfseries}}
 
-\newenvironment{ans}
-    {\begin{textnormal}{\emph{Answer.}}}
-    {\end{textnormal}}
+    \newenvironment{q}
+        {\begin{bfseries}}
+        {\end{bfseries}}
 
-\newenvironment{xx}
-    {\color{red}}
+    \newenvironment{ans}
+        {\begin{textnormal}{\emph{Answer.}}}
+        {\end{textnormal}}
+
+    \newenvironment{xx}
+        {\color{red}}
 
 % Main
 \begin{document}

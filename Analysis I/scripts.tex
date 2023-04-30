@@ -1,0 +1,28 @@
+\newif\ifmainfile
+\newif\ifchapfile
+
+\newcommand*{\exerciseset}[3]{
+    \ifmainfile
+    \else
+        \ifchapfile
+        \else
+            \addtocounter{chapter}{#1}
+            \addtocounter{section}{\numexpr#2-1}
+            \makeatletter
+            \begin{flushright}
+                \@title \\
+                \@author \\
+                \@date
+            \end{flushright}
+            \section{#3}
+        \fi
+    \fi
+}
+
+\definecolor{lxlcolor}{rgb}{0.7, 0.7, 0.7}
+
+\newcommand{\Set}[2]{\{\,#1\mid#2\,\}}
+
+\newcommand{\why}[1]{\hfill\begingroup\color{lxlcolor}{#1}\endgroup}
+
+\renewcommand{\thesubsection}{Exercise \arabic{chapter}.\arabic{section}.\arabic{subsection}}
