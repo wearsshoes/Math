@@ -29,26 +29,20 @@
     We define
     \begin{equation*}
     \begin{aligned}
-        f^{-1}(V) &= \Set{x \in X}{f(x) \in V} \\
-        (f^{-1})(V) &= \Set{f^{-1}(y)}{y \in V}
+        & f^{-1}(V) = \Set{x \in X}{f(x) \in V} \\
+        & (f^{-1})(V) = \Set{f^{-1}(y)}{y \in V}
     \end{aligned}
     \end{equation*}
 
-\begin{lxl}
-        \item First we show $f^{-1}(V) \subseteq (f^{-1})(V)$.
-        \item Let $z \in f^{-1}(V)$. 
-        \item Then $z \in X$ and $f(z) \in V$. 
-        \item Since $f$ is bijective, for all $y$ in $V \subseteq Y$, $y = f(x) = f(f^{-1}(y))$.
-        \item Thus $f(z) \in V \implies y \in V$. 
-        \item Since $f$ is bijective, for all $x$ in $X$, $x = f^{-1}(y) = f^{-1}(f(x))$.
-        \item Thus $z \in X \implies z = f^{-1}(y)$. 
-\end{lxl}
-
-    % The inverse image of $V$ is $f^{-1}(V) = \Set{x \in X}{f(x) \in V}$.
-    % Since $f^{-1}$ is the inverse of $f$, it is a function from $Y \to X$. 
-    % The forward image of $V$ under $f^{-1}$ is $\Set{f^{-1}(y)}{y \in V}$.
-    % With our assumption that $f$ is a bijective function, we know $y=f(x)$, and for all $y$ in $Y$ there exists a unique $x \in X$ such that $f^{-1}(y) = x$.
-    % Thus by substitution the forward image of V under $f^{-1}$ is $\Set{x}{f(x) \in V}$.
+    \begin{lxl}
+            \item First we show $f^{-1}(V) \subseteq (f^{-1})(V)$.
+            \item Let $z \in f^{-1}(V)$. 
+            \item Then $z \in X$ and $f(z) \in V$. 
+            \item Since $f$ is bijective, for all $y$ in $V \subseteq Y$, $y = f(x) = f(f^{-1}(y))$.
+            \item Thus $f(z) \in V \implies y \in V$. 
+            \item Since $f$ is bijective, for all $x$ in $X$, $x = f^{-1}(y) = f^{-1}(f(x))$.
+            \item Thus $z \in X \implies z = f^{-1}(y)$. 
+    \end{lxl}
 \end{proof}
 
 \subsection{}
@@ -102,7 +96,14 @@
             
         \begin{proof}
             \emph{(informal)}
-            As before we have $f^{-1}(U) = \Set{x \in X}{f(x) \in U}$, and $f(f^{-1}(U)) = \Set{f(x)}{x \in f^{-1}(U)}$. This means
+            As before we have $f^{-1}(U) = \Set{x \in X}{f(x) \in U}$, and $f(f^{-1}(U)) = \Set{f(x)}{x \in f^{-1}(U)}$.
+            \begin{align*}
+                f^{-1}(f(f^{-1}(U))) 
+                &= \Set{x \in X}{f(f^{-1}(U)) \in U}\\
+                &= x \in X \textnormal{ and } f(f^{-1}(U)) \in U\\
+                &= x \in X \textnormal{ and } \Set{f(x)}{x \in f^{-1}(U)} \in U\\
+                &= x \in X \textnormal{ and } ( \exists x \textnormal{ such that } y=f(x) \textnormal{ and } x \in f^{-1}(U) ) \in U\\  
+            \end{align*}
             \begin{xx}
                 \begin{align*}
                     f^{-1}(f(f^{-1}(U))) 
@@ -233,7 +234,37 @@
     
     \end{ans}
     \begin{proof}
+        I want to first try to prove $f(A \cap B) = f(A) \cap f(B)$. Since I already have $f(A \cap B) \subseteq f(A) \cap f(B)$, I just need $f(A) \cap f(B) \subseteq f(A \cap B)$.
         
+        \begin{lxl}
+            \item Suppose $y \in f(A) \cap f(B)$
+            \item $y \in f(A)$ and $y \in f(B)$
+            \item $y \in \Set{f(x)}{x \in A}$
+            \item $\exists x$ st. $y = f(x)$ and $x \in A$
+            \item Suppose $x$ st. $y = f(x)$ and $x \in A$
+            \item $y \in \Set{f(x)}{x \in B}$
+            \item $\exists x$ st. $y = f(x)$ and $x \in A$
+        \end{lxl}
+
+        Next I'm going to try to prove $f(A) \setminus f(B) = f(A \setminus B)$. I already have $f(A) \setminus f(B) \subseteq f(A \setminus B)$ and I just need $f(A \setminus B) \subseteq f(A) \setminus f(B)$.
+        \begin{lxl}
+            \item Suppose $y \in f(A \setminus B)$.
+            \item $\exists x$ such that $y=f(x)$ and $x \in A \setminus B$.
+            \item Suppose $x$ such that $y=f(x)$ and $x \in A \setminus B$.
+            \begin{lxl}
+                \item $y=f(x)$
+                \item $x \in A \setminus B$
+                \item $x \in A$ and $x \notin B$
+                \item $y=f(x)$ and $x \in A$
+                \item $y \in \Set{f(x)}{x \in A}$
+                \item $y \in f(A)$
+                \item $y=f(x)$ and $x \notin B$
+                \item \sout{$y \in \Set{f(x)}{x \notin B}$} (not useful!)
+            \end{lxl}
+        \end{lxl}
+        \begin{xx}
+            not sure where to go from here
+        \end{xx}
     \end{proof}
 \end{q}
 
