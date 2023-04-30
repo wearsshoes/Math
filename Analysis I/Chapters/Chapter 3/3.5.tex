@@ -6,14 +6,46 @@
 \addtocounter{subsection}{1}
 \subsection{}
 \begin{q}
-    Suppose we define an ordered $n$-tuple to be a surjective function $x : {i \in \mathbb{N} : 1 \leq i \leq n} \to X$ whose codomain is some arbitrary set $X$ (so different ordered $n$-tuples are allowed to have different ranges); we then write $x_i$ for $x(i)$ and also write $x$ as $(x_i){1 \leq i \leq n}$. Using this definition, verify that we have $(x_i){1 \leq i \leq n} = (y_i){1 \leq i \leq n}$ if and only if $x_i = y_i$ for all $1 \leq i \leq n$. 
+    Suppose we define an ordered $n$-tuple to be a surjective function $x : \Set{i \in \mathbb{N}}{1 \leq i \leq n} \to X$ whose codomain is some arbitrary set $X$ (so different ordered $n$-tuples are allowed to have different ranges); we then write $x_i$ for $x(i)$ and also write $x$ as $(x_i)_{1 \leq i \leq n}$. Using this definition, verify that we have $(x_i)_{1 \leq i \leq n} = (y_i)_{1 \leq i \leq n}$ if and only if $x_i = y_i$ for all $1 \leq i \leq n$. 
 \end{q}
 
 \begin{proof}
-
+    We are asked to prove that the n-tuples $x$ and $y$ are equal for all $1 \leq i \leq n$ by showing that their components $x_i$ and $y_i$ are equal for all  $1 \leq i \leq n$, and vice versa. We rewrite our definitions for clarity:
+    \begin{lxl}
+        \item Let $X$ be any set. 
+        \item Let $x : \Set{i \in \mathbb{N}}{1 \leq i \leq n} \to X$
+        \item Let $x_i = x(i)$ 
+        \item Let $x = (x_i)_{1 \leq i \leq n}$
+    \end{lxl}
+    We proceed in the forward direction.
+    \begin{lxl}[resume]
+        \item Suppose $(x_i)_{1 \leq i \leq n} = (y_i)_{1 \leq i \leq n}$.
+        \begin{lxl}
+            \item $x = y$ \why{line 4}
+            \item Suppose ${1 \leq i \leq n}$
+            \begin{lxl}
+                \item $i \in \Set{i \in \mathbb{N}}{1 \leq i \leq n}$
+                \item $x(i)$=$y(i)$ \why{line 5.1}
+                \item $x_i=y_i$ \why{line 3}
+            \end{lxl}
+            \item $\forall i \in \mathbb{N} \quad {1 {\leq} i {\leq} n} \implies x_i=y_i$
+        \end{lxl}
+        \item $(x_i)_{1 \leq i \leq n} = (y_i)_{1 \leq i \leq n} \implies \bigl( \forall i \in \mathbb{N} \quad {1 {\leq} i {\leq} n} \implies x_i=y_i \bigr)$.
+    \end{lxl}
+    Now in the reverse direction:
+    \begin{lxl}[resume]
+        \item Suppose $i \in \mathbb{N}$ st. ${1 {\leq} i {\leq} n} \implies x_i=y_i$.
+        \begin{lxl}
+            \item $i \in \Set{i \in \mathbb{N}}{1 \leq i \leq n}$ \why{line 2}
+            \item $x_i=y_i$ \why{slightly awkward MP}
+            \item $(x)_{1 \leq i \leq n}(i)=y_{1 \leq i \leq n}(i)$ \why{lines 3, 4}
+        \end{lxl}
+        \item $\forall i \in \mathbb{N} \quad \bigl({1 {\leq} i {\leq} n} \implies x_i=y_i \bigr) \implies (x)_{1 \leq i \leq n}(i)=y_{1 \leq i \leq n}(i)$ 
+    \end{lxl}\item
+    Thus they are equal.
 \end{proof}
 \begin{xx}
-    
+    Note: Didn't use the surjectivity in the proof at all?
 \end{xx}
 
 \begin{q}
@@ -21,7 +53,7 @@
 \end{q}
 
 \begin{proof}
-
+    
 \end{proof}
 \begin{xx}
     
