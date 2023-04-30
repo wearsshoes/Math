@@ -56,15 +56,18 @@
 
 \end{proof}
 \begin{xx}
-    
+    Unsure how to approach.
 \end{xx}
 
 \addtocounter{subsection}{1}
 \subsection{}
 \begin{q}
     Let $A, B, C$ be sets. Show that: 
+\end{q}
     \begin{enumerate}
+        \begin{q}
         \item $A \times (B \cup C) = (A \times B) \cup (A \times C)$,
+        \end{q}
         \begin{proof}
             We need to show every element of $A \times (B \cup C)$ is also in $(A \times B) \cup (A \times C)$ and vice versa. We first prove the forward direction:
             \begin{lxl}
@@ -88,37 +91,68 @@
                     \end{lxl}
                     \item $a \in (A \times B)$ or $a \in (A \times C)$
                     \item $a \in (A \times B) \cup (A \times C)$
-                    \item $A \times (B \cup C) \subseteq (A \times B) \cup (A \times C)$
-                    
                 \end{lxl}
+                \item $a \in A \times (B \cup C) \implies a \in (A \times B) \cup (A \times C)$
+                \item $A \times (B \cup C) \subseteq (A \times B) \cup (A \times C)$
             \end{lxl}
-            \item Now the reverse:
-            \begin{lxl}
-                \item Suppose $x \in (A \times B) \cup (A \times C)$
+            \item Now this is mostly invertible:
+            \begin{lxl}[resume]
+                \item Suppose $a \in (A \times B) \cup (A \times C)$
                 \begin{lxl}
-                    \item
+                    \item $a \in (A \times B)$ or $a \in (A \times C)$
+                    \item Case $a \in (A \times C)$
+                    \begin{lxl}
+                        \item $a \in \Set{(x,y)}{x \in A$ and $y \in B}$
+                        \item $a \in (x,y)$ and $(a_1 \in A$ and $a_2 \in B)$
+                    \end{lxl}
+                    \item Case $a \in (A \times B)$
+                    \begin{lxl}
+                        \item $a \in \Set{(x,y)}{x \in A$ and $y \in C}$
+                        \item $a \in (x,y)$ and $(a_1 \in A$ and $a_2 \in C)$
+                    \end{lxl}
+                    \item $\bigl( a \in (x,y)$ and $(a_1 \in A$ and $a_2 \in B) \bigr)$ or $\bigl( a \in (x,y)$ and $(a_1 \in A$ and $a_2 \in C) \bigr)$
+                    \item $a \in (x,y)$ and $\bigl( (a_1 \in A$ and $a_2 \in B)$ or $(a_1 \in A$ and $a_2 \in C) \bigr)$
+                    \item $a \in \Set{(x,y)}{(x \in A$ and $y \in B)$ or $(x \in A$ and $y \in C)}$
+                    \item $a \in \Set{(x,y)}{x \in A$ and $y \in B$ or $y \in C}$
+                    \item $a \in \Set{(x,y)}{x \in A$ and $y \in (B \cup C)}$
                 \end{lxl}
+                \item $a \in (A \times B) \cup (A \times C) \implies a \in A \times (B \cup C)$
+                \item $(A \times B) \cup (A \times C) \subseteq A \times (B \cup C)$
             \end{lxl}
+            And thus we have $A \times (B \cup C) = (A \times B) \cup (A \times C)$
+        \end{proof}
+        \begin{xx}
+        A little confused, since it seems like $a \in (x,y)$ should be $a \in \{(x,y)\}$
+            
+        \end{xx} 
+        \item \begin{q}
+            $A \times (B \cup C) = (A \times B) \cup (A \times C)$,
+        \end{q}    
+        \begin{proof}
+            [Skipped]
         \end{proof}
         \begin{xx}
             
-        \end{xx}        
-        \item $A \times (B \cup C) = (A \times B) \cup (A \times C)$, $A \times (B \cap C) = (A \times B) \cap (A \times C)$,
+        \end{xx}   
+        \item \begin{q}
+$A \times (B \cap C) = (A \times B) \cap (A \times C)$,
+        \end{q}    
         \begin{proof}
-    
+            [Skipped]
         \end{proof}
         \begin{xx}
             
-        \end{xx}        
-        \item  and $A \times (B\setminus C) = (A \times B)\setminus(A \times C)$. (One can of course prove similar identities in which the roles of the left and right factors of the Cartesian product are reversed.)
+        \end{xx}      
+        \item \begin{q}
+            and $A \times (B\setminus C) = (A \times B)\setminus(A \times C)$. (One can of course prove similar identities in which the roles of the left and right factors of the Cartesian product are reversed.)
+        \end{q}
         \begin{proof}
-    
+            [Skipped]
         \end{proof}
         \begin{xx}
             
         \end{xx}        
     \end{enumerate}    
-\end{q}
 
 \addtocounter{subsection}{2}
 \subsection{}
@@ -127,7 +161,22 @@
 \end{q}
 
 \begin{proof}
-    
+    Rewrite the definitions:
+    \begin{lxl}
+        \item Let $X$ and $Y$ be arbitrary sets
+        \item Let $\pi_{X\times Y\to X} : X \times Y \to X$ be the map $\pi_{X\times Y\to X}(x, y) := x$
+        \item Let $\pi_{X\times Y\to Y} : X \times Y \to Y$ be the map $\pi_{X\times Y\to Y}(x, y) := y$
+        \item Let $f : Z \to X$ and $g : Z \to Y$ be arbitrary functions.
+    \end{lxl}
+    We first want to show $h : Z \to X \times Y$ exists.
+    \begin{lxl}[resume]
+        \item Suppose 
+    \end{lxl}
+    Next we want to show it is unique.
+    \begin{lxl}[resume]
+        \item
+    \end{lxl}
+    Thus there exists a unique $h$ that satisfies $\pi_{X\times Y\to X} \circ h = f$ and $\pi_{X\times Y\to Y} \circ h = g$.
 \end{proof}
 \begin{xx}
     
@@ -178,35 +227,41 @@
 \subsection{}
 \begin{q}
     If $f : X \to Y$ is a function, define the graph of $f$ to be the subset of $X \times Y$ defined by $\{(x, f(x)) : x \in X\}$.
-
-        \begin{enumerate}
-        \item Show that two functions $f : X \to Y$, $\tilde{f} : X \to Y$ are equal if and only if they have the same graph.
-        \begin{proof}
-            
-        \end{proof}
-        \begin{xx}
-            
-        \end{xx}
-
-        \item Conversely, if $G$ is any subset of $X \times Y$ with the property that for each $x \in X$, the set $\{y \in Y : (x, y) \in G\}$ has exactly one element (or in other words, $G$ obeys the vertical line test), show that there is exactly one function $f : X \to Y$ whose graph is equal to $G$.
-            
-        \begin{proof}
-            
-        \end{proof}
-        \begin{xx}
-            
-        \end{xx}
-
-        \item Suppose we define a function $f$ to be an ordered triple $f = (X, Y, G)$, where $X, Y$ are sets, and $G$ is a subset of $X \times Y$ that obeys the vertical line test. We then define the domain of such a triple to be $X$, the codomain to be $Y$ and for every $x \in X$, we define $f(x)$ to be the unique $y \in Y$ such that $(x, y) \in G$. Show that this definition is compatible with Definition 3.3.1 in the sense that every choice of domain $X$, codomain $Y$, and property $P(x, y)$ obeying the vertical line test produces a function as defined here that obeys all the properties required of it in that definition, and is also similarly compatible with Definition 3.3.8.
-            
-        \begin{proof}
-            
-        \end{proof}
-        \begin{xx}
-            
-        \end{xx}
-
-        \end{enumerate}
 \end{q}
+
+\begin{enumerate}
+    \item \begin{q}
+        Show that two functions $f : X \to Y$, $\tilde{f} : X \to Y$ are equal if and only if they have the same graph.
+    \end{q}
+    \begin{proof}
+        
+    \end{proof}
+    \begin{xx}
+        
+    \end{xx}
+
+    \item \begin{q}
+        Conversely, if $G$ is any subset of $X \times Y$ with the property that for each $x \in X$, the set $\{y \in Y : (x, y) \in G\}$ has exactly one element (or in other words, $G$ obeys the vertical line test), show that there is exactly one function $f : X \to Y$ whose graph is equal to $G$.
+    \end{q}
+
+        
+    \begin{proof}
+        
+    \end{proof}
+    \begin{xx}
+        
+    \end{xx}
+    \item \begin{q}
+        Suppose we define a function $f$ to be an ordered triple $f = (X, Y, G)$, where $X, Y$ are sets, and $G$ is a subset of $X \times Y$ that obeys the vertical line test. We then define the domain of such a triple to be $X$, the codomain to be $Y$ and for every $x \in X$, we define $f(x)$ to be the unique $y \in Y$ such that $(x, y) \in G$. Show that this definition is compatible with Definition 3.3.1 in the sense that every choice of domain $X$, codomain $Y$, and property $P(x, y)$ obeying the vertical line test produces a function as defined here that obeys all the properties required of it in that definition, and is also similarly compatible with Definition 3.3.8.
+    \end{q}
+        
+    \begin{proof}
+        
+    \end{proof}
+    \begin{xx}
+        
+    \end{xx}
+
+\end{enumerate}
 
 \end{document}

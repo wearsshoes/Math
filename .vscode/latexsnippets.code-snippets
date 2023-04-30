@@ -80,9 +80,8 @@
 	"Subproof": {
 	"prefix": ["lxl","suppose", "subproof"],
 		"body": [
-			"Suppose",
 			"\\begin{lxl}",
-			"\t\\item",
+			"\t\\item$0",
 			"\\end{lxl}"
 		  ],
 		"description": "Makes a subproof"
