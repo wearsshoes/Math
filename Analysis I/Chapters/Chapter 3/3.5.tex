@@ -53,7 +53,7 @@
 \end{q}
 
 \begin{proof}
-    
+
 \end{proof}
 \begin{xx}
     
@@ -66,7 +66,39 @@
     \begin{enumerate}
         \item $A \times (B \cup C) = (A \times B) \cup (A \times C)$,
         \begin{proof}
-    
+            We need to show every element of $A \times (B \cup C)$ is also in $(A \times B) \cup (A \times C)$ and vice versa. We first prove the forward direction:
+            \begin{lxl}
+                \item Suppose $a \in A \times (B \cup C)$
+                \begin{lxl}
+                    \item $a \in \Set{(x,y)}{x \in A$ and $y \in (B \cup C)}$
+                    \item $a \in \Set{(x,y)}{x \in A$ and $y \in B$ or $y \in C}$
+                    \item $a \in \Set{(x,y)}{x \in A$ and $y \in B$ or $y \in C}$
+                    \item $a \in \Set{(x,y)}{(x \in A$ and $y \in B)$ or $(x \in A$ and $y \in C)}$
+                    \item $a \in (x,y)$ and $\bigl( (a_1 \in A$ and $a_2 \in B)$ or $(a_1 \in A$ and $a_2 \in C) \bigr)$
+                    \item $\bigl( a \in (x,y)$ and $(a_1 \in A$ and $a_2 \in B) \bigr)$ or $\bigl( a \in (x,y)$ and $(a_1 \in A$ and $a_2 \in C) \bigr)$
+                    \item Case $a \in (x,y)$ and $(a_1 \in A$ and $a_2 \in B)$
+                    \begin{lxl}
+                        \item $a \in \Set{(x,y)}{x \in A$ and $y \in B}$
+                        \item $a \in (A \times B)$
+                    \end{lxl}
+                    \item Case $a \in (x,y)$ and $(a_1 \in A$ and $a_2 \in C)$
+                    \begin{lxl}
+                        \item $a \in \Set{(x,y)}{x \in A$ and $y \in C}$
+                        \item $a \in (A \times C)$
+                    \end{lxl}
+                    \item $a \in (A \times B)$ or $a \in (A \times C)$
+                    \item $a \in (A \times B) \cup (A \times C)$
+                    \item $A \times (B \cup C) \subseteq (A \times B) \cup (A \times C)$
+                    
+                \end{lxl}
+            \end{lxl}
+            \item Now the reverse:
+            \begin{lxl}
+                \item Suppose $x \in (A \times B) \cup (A \times C)$
+                \begin{lxl}
+                    \item
+                \end{lxl}
+            \end{lxl}
         \end{proof}
         \begin{xx}
             
