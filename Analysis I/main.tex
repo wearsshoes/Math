@@ -14,12 +14,11 @@
 
 % Graphs
 \usepackage[]{tikz}
-\usepackage[]{proof}
 
 % Subfiles
 \usepackage{refcount}
-\usepackage{hyperref}
 \usepackage{xr-hyper}
+\usepackage{hyperref}
 \usepackage{subfiles} % Best loaded last in the preamble
     
 %Titlecontent
@@ -30,17 +29,27 @@
 %Global variables
 \newif\ifmainfile
 \newif\ifchapfile
+\definecolor{lxlcolor}{rgb}{0.7, 0.7, 0.7}
 \newcommand\Set[2]{\{\,#1\mid#2\,\}}
+\newcommand{\why}[1]{\hfill\begingroup\color{lxlcolor}{#1}\endgroup}
 
 %Formatting
 \geometry{letterpaper, portrait, margin=1in}
 \onehalfspacing
 \setlength{\parskip}{1em}
 \setlength{\parindent}{0pt}
-\setlist[enumerate, 1]{label = \textbf{\alph*.}}
-\setlist[enumerate, 2]{nosep, label=(\arabic*)}
 \renewcommand{\thesubsection}{Exercise \arabic{chapter}.\arabic{section}.\arabic{subsection}}
 \hypersetup{colorlinks, linkcolor={blue}}
+
+%Exercise subproblems
+\setlist[enumerate, 1]{label = \textbf{\alph*.}}
+
+%Line-by-line solutions
+\newlist{lxl}{enumerate}{3}
+\setlist[lxl]{nosep, labelsep=2em, labelwidth=0em}
+\setlist[lxl, 1]{label=\color{lxlcolor}\arabic{lxli}.}
+\setlist[lxl, 2]{label=\color{lxlcolor}\arabic{lxli}.\arabic{lxlii}.}
+\setlist[lxl, 3]{label=\color{lxlcolor}\arabic{lxli}.\arabic{lxlii}.\arabic{lxliii}.}
 
 % TikZ
 \usetikzlibrary{positioning}
