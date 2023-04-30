@@ -1,9 +1,5 @@
 {
-	"folders": [
-		{
-			"path": "."
-		}
-	],
+	"folders": [{"path": "."}],
 	"settings": {
 		"editor.wordWrap": "on",
 		"explorer.sortOrder": "default",
