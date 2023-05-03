@@ -85,5 +85,14 @@
 			"\\end{lxl}"
 		  ],
 		"description": "Makes a subproof"
-	}
+	},
+	"Resume proof": {
+		"prefix": ["lxlr", "resume"],
+			"body": [
+				"\\begin{lxl}[resume]",
+				"\t\\item$0",
+				"\\end{lxl}"
+			  ],
+			"description": "Makes a subproof"
+		}
 }

@@ -267,7 +267,6 @@
                 
             \end{xx}
         \end{proof}
-
         \item 
         Show that \(f^{-1}(f(S)) = S \text{ for every } S \subseteq X \text{ if and only if } f \text{ is injective.}\)
         \begin{proof}
@@ -280,7 +279,108 @@
 
 \end{q}
 
-\addtocounter{subsection}{3}
+\subsection{}
+\begin{enumerate}
+    \item
+        \begin{q}
+            Prove Lemma 3.4.10. (Hint: start with the set $\{0, 1\}^X$ and apply the replacement axiom, replacing each function $f$ with the object $f^{-1}(\{1\})$. See also Exercise 3.5.11.)
+
+            (Lemma 3.4.10):
+            Let $X$ be a set. Then the set $\Set{Y}{Y$ is a subset of $X}$ is a set. That is to say, there exists a set $Z$ such that $Y \in Z \iff Y \subseteq X$.
+        \end{q}
+        \begin{proof}                                    
+        We need to prove $\Set{Y}{Y \subseteq X}$ exists. We construct a set that we know exists, and then prove that it is equal to $\Set{Y}{Y \subseteq X}$.
+        \begin{lxl}
+            \item Let $X$ be an arbitrary set.
+            \item Let $F$ be the set $\{0, 1\}^{X}$ 
+            \item $f \in F \iff f : X \to \{0,1\}$ \why{power set axiom}
+            \item Let $P(f,a)$ such that $P(f,a) \iff a=f^{-1}(\{1\})$
+            \item Let $Z$ be the set $\Set{a}{P(f, a)$ is true for some $f \in F}$
+            \item $z \in Z \iff P(f, z) $ is true for some $f \in F$. \why{axiom of replacement}
+            \item Suppose $Y \in Z$.
+            \begin{lxl}
+                \item $P(f, Y)$ is true for some $f \in F$ \why{5}
+                \item Suppose $g \in F$ such that $P(g, Y)$
+                \begin{lxl}
+                    \item $Y=g^{-1}(\{1\})$ \why{3}
+                    \item $Y \subseteq X$ \why{def of inverse image}
+                \end{lxl}
+                \item $Y \subseteq X$
+            \end{lxl}
+            \item $\forall Y, \; Y \in Z \implies Y \subseteq X$
+            \item Suppose $Y \subseteq X$.
+            \begin{lxl}
+                \item Let $g: X \to \{0, 1\} = x \mapsto 1$ for $x \in Y$ and $x \mapsto 0$ otherwise. 
+                \item $g \in F$ \why{3}
+                \item $Y = g^{-1}(\{1\})$ \why{7.5.1}
+                \item $P(g, Y)$ \why{4}
+                \item $Y \in Z$ \why{6}
+            \end{lxl}
+            \item $\forall Y, \; Y \subseteq X \implies Y \in Z$
+            \item $\forall z, \; z \in Z \iff z \in \Set{Y}{Y \subseteq X}$. \why{axiom of set equality}
+            \item $Z = \Set{Y}{Y \subseteq X}$
+            \item $\Set{Y}{Y \subseteq X}$ is a set.
+        \end{lxl}
+
+    Let X be arbitrary. 
+    We need to prove $\Set{Y}{Y \subseteq X}$ exists. 
+    Let's proceed by creating a valid set and proving it is equal to $\Set{Y}{Y \subseteq X}$.
+    Let F be the power set $\{0,1\}^X$. 
+    Let $Z$ be the set $\Set{a}{P(f, a)$ is true for some $f \in F}$, where $P(f,a)$ is $a = f^{-1}(\{1\})$. 
+    In order to show $Z=\Set{Y}{Y \subseteq X}$, we need to show $z \in Z \iff z \subseteq X$ is true.
+    We will first prove the forward direction
+
+    Suppose $Y \in Z$. 
+    Then by the axiom of specification $P(f, Y)$ is true for some $f \in F$. 
+    Choose $g \in F$ such that $P(g, Y)$ is true. 
+    Then $Y = g^{-1}(\{1\})$.
+    Since by definition $g^{-1}(\{1\})$ is in $X$, $Y \in X$.
+
+    Conversely suppose $Y \subseteq X$.
+    Let $g : X \to \{0, 1\}$ be the function $x \mapsto 1$ for $x \in Y$ and $x \mapsto 0$ otherwise. Since every function $X \to \{0, 1\}$ is in $F$, $g$ is in $F$. Since $x \mapsto 1$ for $x \in Y$, we know $Y = g^{-1}(\{1\})$, which means $P(g, Y)$ is true, and thus $Y \in Z$.
+
+    We've proved $Y \in Z \iff Y \subseteq X$, so $Z=\Set{Y}{Y \subseteq X}$ is true, and since $Z$ exists, $\Set{Y}{Y \subseteq X}$ exists.
+    \end{proof}
+
+    \item 
+    \begin{q}
+        Conversely, show that Axiom 3.11 can be deduced from the preceding axioms of set theory if one accepts Lemma 3.4.10 as an axiom. (This may help explain why we refer to Axiom 3.11 as the "power set axiom".)
+    \end{q}
+    
+    \begin{proof}
+            
+    \end{proof}        
+\end{enumerate} 
+
+\subsection{}
+\begin{q}
+    Let $X$, $Y$ be sets. Define a partial function from $X$ to $Y$ to be any function $f : X' \to Y'$ whose domain $X'$ is a subset of $X$, and whose codomain $Y'$ is a subset of $Y$. Show that the collection of all partial functions from $X$ to $Y$ is itself a set. (Hint: use Exercise 3.4.6, the power set axiom, the replacement axiom, and the union axiom.
+\end{q}
+
+\begin{proof}
+    We wish to show that $Y'^{X'}$ defined as $\Set{f'}{f' : X' \to Y'}$ exists.
+\begin{lxl}
+    \item Let $X$, $Y$ be arbitrary sets.
+    \item For $X' \subseteq X$ and $Y' \subseteq Y, \; f' : X' \to Y'$
+    \item $\Set{f}{f : X \to Y}$ is a set. \why{power set axiom}
+    \item $\Set{X'}{X' \subseteq X}$ is a set. \why{Lemma 3.4.10, see above}
+    \item $\Set{Y'}{Y' \subseteq Y}$ is a set. \why{Lemma 3.4.10, see above}
+    \item 
+    \item $\Set{f'}{f': X' \to Y}$ is a set.
+    \item $\Set{f'}{f': X \to Y'}$ is a set.
+    \item $\Set{f'}{f': X' \to Y} \cup \Set{f'}{f': X \to Y'}$ is a set. \why{union axiom}
+    \item $\forall a, \; a \in \Set{f'}{f': X' \to Y} \cup \Set{f'}{f': X \to Y'} \iff a \in X' \to Y$ and $a \in X \to Y'$\why{axiom of replacement}
+    \item $a \in X' \to Y'$
+    \item $a \in \Set{f'}{f' : X' \to Y'}$ \why{axiom of replacement}
+    \item $\Set{f'}{f' : X' \to Y'}$ is a set.
+\end{lxl}    
+\end{proof}
+    \begin{xx}
+    not proved :(     
+    \end{xx}
+
+
+\addtocounter{subsection}{1}
 \subsection{}
 \begin{q}
     Show that if $\beta$ and $\beta'$ are two elements of a set $I$, and to each $\alpha \in I$ we assign a set $A_\alpha$, then \[
