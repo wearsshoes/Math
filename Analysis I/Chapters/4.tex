@@ -1,0 +1,22 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\ifmainfile
+\else
+    \makeatletter
+    \begin{flushright}
+        \@title \\
+        \@author \\
+        \@date
+    \end{flushright}
+    \addtocounter{chapter}{3}
+    \chapfiletrue
+\fi
+
+\begingroup
+\let\clearpage\relax
+\chapter{Integers and Rationals}
+\endgroup
+
+\subfile{Chapter 4/4.1.tex}
