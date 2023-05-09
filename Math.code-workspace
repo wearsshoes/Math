@@ -5,5 +5,9 @@
 		"explorer.sortOrder": "default",
 		"explorer.excludeGitIgnore": true,
 		"editor.suggest.snippetsPreventQuickSuggestions": false,
+		"latex-workshop.view.pdf.color.dark.backgroundColor": "#181818",
+		"latex-workshop.view.pdf.color.dark.pageColorsBackground": "#202020",
+		"latex-workshop.view.pdf.color.dark.pageColorsForeground": "lightgrey",
+		"latex-workshop.view.pdf.color.dark.pageBorderColor": ""
 	}
 }
