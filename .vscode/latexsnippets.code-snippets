@@ -36,19 +36,12 @@
 		"prefix": "problem",
 		"body": [
 			"\\begin{q}",
-			"\t$0",
+			"\t$1",
 			"\\end{q}",
 			"",
-			"\\begin{ans}",
-			"\t",
-			"\\end{ans}",
-			"\t",
 			"\\begin{proof}",
-			"\t",
+			"\t$0",
 			"\\end{proof}",
-			"\t\\begin{xx}",
-			"\t\t",
-			"\t\\end{xx}",
 		],
 		"description": "Creates template for homework assignments"
 	},
@@ -56,22 +49,10 @@
 		"prefix": ["newdoc", "assignment"],
 		"body": [
 			"\\documentclass[../../main.tex]{subfiles}",
-			"",
 			"\\begin{document}",
+			"\\exerciseset{$1}{$2}{$3}",
 			"",
-			"\\ifmainfile",
-			"\\else",
-			"\t\\makeatletter",
-			"\t\\begin{flushright}",
-			"\t\t\\@title \\\\",
-			"\t\t\\@author \\\\",
-			"\t\t\\@date",
-			"\t\\end{flushright}",
-			"\t\\addtocounter{chapter}{}",
-			"\t\\addtocounter{section}{}",
-			"\t\\section{}",
-			"\t\\fi",
-			"\\fi",
+			"$0",
 			"",
 			"\\end{document}"
 		  ],
@@ -93,6 +74,6 @@
 				"\t\\item$0",
 				"\\end{lxl}"
 			  ],
-			"description": "Makes a subproof"
+			"description": "Resumes a subproof"
 		}
 }
