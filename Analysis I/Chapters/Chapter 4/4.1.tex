@@ -2,4 +2,180 @@
 \begin{document}
 \exerciseset{4}{1}{The integers}
 
+\subsection{}
+\begin{q}
+    Verify that the definition of equality on the integers is both reflexive and symmetric.
+\end{q}
+\begin{proof}
+    We first prove that the definition of equality is reflexive.
+    Let $a, b, c, d \in \mathbb{N}$.
+    Let $(a$---$b) \in \mathbb{Z}$.
+    We wish to prove $a$---$b = a$---$b$.
+    By reflexivity for the natural numbers, $a + b = a + b$.
+    The definition of equality for integers states $a$---$b = c$---$d \iff a + d = b + c$.
+    Thus, $a$---$b = a$---$b$, as desired. 
+
+    Next we prove the definition of equality is symmetric.
+    Suppose $a, b, c, d \in \mathbb{N}$.
+    We wish to prove $a$---$b = c$---$d \iff c$---$d = a$---$b$.
+    The definition of equality for integers states $a$---$b = c$---$d \iff a + d = b + c$.
+    We know by symmetry for the natural numbers that $a + d = b + c \iff b + c = a + d$.
+    Thus, $a$---$b = c$---$d \iff c$---$d = a$---$b$, as desired.
+\end{proof}
+
+\addtocounter{subsection}{1}
+\subsection{}
+\begin{q}
+    Show that $(-1) \times a = -a$ for every integer $a$.
+\end{q}
+\begin{proof}
+    Let $a$ in $\mathbb{Z}$. Allow $a$ to be the integer $h-j$ for some $h$ and $j$ in $\mathbb{N}$. By integer negation, we can rewrite $-1 \times a$ as $(0-1) \times (h-j)$. By integer multiplication, we have $(0h + 1j) - (0j + 1h)$, which by natural number multiplication is $(j-h)$. Meanwhile, by integer negation $-a$ is also $(j-h)$. Thus $(-1) \times a = -a$ by integer equality. 
+\end{proof}
+
+\pagebreak
+\subsection{}
+\begin{enumerate}
+    \setcounter{enumi}{7}
+    \item 
+    \begin{q}
+        Let $x, y, z$ be integers. Show that $x(y+z)=xy+xz$.
+    \end{q}
+    \begin{proof} 
+        Let $x$ be the integer $(a-b)$, $y$ be $(c-d)$, and $z$ be $(e-f)$.
+        \begin{align*}
+            x(y+z) &= (a-b)\big((c-d)+(e-f)\big) \\
+            &= (a-b)\big((c+e)-(d+f)\big) \\
+            &= (a(c+e)+b(d+f))-(a(d+f)+b(c+e))\\
+            &= (ac+ae+bd+bf)-(ad+af+bc+be); \\ \\
+            xy + xz &= (a-b)(c-d)+(a-b)(e-f) \\
+            &= \big((ac+bd)-(ad+bc)\big)+\big((ae+bf)-(af+be)\big) \\
+            &= ((ac+bd)+(ae+bf))-((ad+bc)+(af+be)) \\
+            &= (ac+ae+bd+bf)-(ad+af+bc+be)
+        \end{align*}
+    \end{proof}
+\end{enumerate}
+
+\subsection{}
+\begin{q}
+    Prove Proposition 4.1.8: Let $a$ and $b$ be integers such that $ab = 0$. Then either $a = 0$ or $b = 0$ (or both).
+\end{q}
+\begin{proof}
+    By the trichotomy of integers, $a$ is equal to a positive natural number, zero, or the negation of a positive natural number. Likewise for $b$.
+    \begin{lxl}
+        \item Suppose $a$ is zero.
+        \begin{lxl}
+            \item $a = 0$ or $b = 0$
+        \end{lxl}
+        \item Suppose $a$ is equal to a positive natural number $n$.
+        \begin{lxl}
+            \item Suppose $b$ is zero
+            \begin{lxl}
+                \item $a = 0$ or $b = 0$
+            \end{lxl}
+            \item Suppose $b$ is equal to a positive natural number $m$.
+            \begin{lxl}
+                \item $n \times m = 0$ 
+                \item $n = 0$ or $m = 0$ by Lemma 2.3.3
+                \item $a = 0$ or $b = 0$  
+            \end{lxl}
+            \item Suppose $b$ is the negation of a positive natural number $m$.
+            \item $(n-0)(0-m)=0$
+            \item $(n \times 0 + 0 \times m) - (n \times m + 0 \times 0) = 0$
+            \item $-(n \times m)=0$
+            \item $-(n \times m)=(0-0)$
+            \item $(n \times m)=0$ by Exercise 4.1.2.
+            \item $n = 0$ or $m = 0$ by Lemma 2.3.3
+            \item $n = 0$ or $-m = 0$ by Exercise 4.1.2 again
+            \item $a = 0$ or $b = 0$  
+        \end{lxl}
+        \item Suppose $a$ is the negation of a positive natural number $n$.
+        \begin{lxl}
+            \item Suppose $b$ is zero
+            \begin{lxl}
+                \item $a = 0$ or $b = 0$
+            \end{lxl}
+            \item Suppose $b$ is equal to a positive natural number $n$.
+            \begin{lxl}
+                \item By commutativity, same case as 2.3. 
+                \item $a = 0$ or $b = 0$
+            \end{lxl}
+            \item Suppose $b$ is the negation of a positive natural number $m$.
+            \begin{lxl}
+                \item $(0-n)(0-m)=0$
+                \item $(0 \times 0 + n \times m)-(0 \times m + 0 \times n) = 0$
+                \item $n \times m = 0$
+                \item $n = 0$ or $m = 0$
+                \item $(0 - n) = 0$ or $(0 - m) = 0$
+                \item $a = 0$ or $b = 0$
+            \end{lxl}
+        \end{lxl}
+    \end{lxl}
+    In all cases, $a = 0$ or $b = 0$.
+    
+\begin{xx}
+        By the trichotomy of integers $a$ and $b$ are either natural numbers or the negation of positive natural numbers. If $a$ and $b$ are equal to natural numbers, then $ab=0 \implies a=0$ or $b=0$ by Lemma 2.3.3. If $a$ is the negation of a positive natural number $n$ and $b$ is equal to a natural number, such that $(-n)b=0$, then $ab=0 \implies -n=0$ or $b=0$, but we said $-n \neq 0$ so $ab=0 \implies b=0$. Likewise if $b$ is the negation of some positive natural number $m$ such that $a(-m)=0$ then $ab=0 \implies a=0$. If they are both negations of some positive natural numbers $n$ and $m$ then $nm \neq 0$ by Lemma 2.3.3, and thus $ab \neq 0$, so $ab=0 \implies a=0$ is vacuously true. (some mistakes around -n, need to use -n = -1(n) here)
+\end{xx}    
+\end{proof}
+
+\subsection{}
+\begin{q}
+    (Cancellation law for integers) If $a, b, c$ are integers such that $ac = bc$ and $c$ is non-zero, then $a = b$.
+\end{q}
+
+\begin{proof}
+    Let $a, b, c$ be integers such that $ac = bc$ and $c$ is non-zero.
+    \begin{lxl}
+        \item $ac - bc = bc - bc$
+        \item $ac - bc = 0$
+        \item $ac + -(bc) = 0$
+        \item $ac + -1(bc) = 0$
+        \item $ac + (-1)(b)(c) = 0$
+        \item $(a + -1(b))c = 0$
+        \item $(a + -b)c = 0$
+        \item $(a - b)c=0$
+        \item $a-b = 0$ \why{Lemma 4.1.8, $c \neq 0$}
+        \item $a -b + b = 0 + b$
+        \item $a = b$
+    \end{lxl}
+\end{proof}
+
+\addtocounter{subsection}{1}
+\subsection{}
+\begin{q}
+    Show that the principle of induction (Axiom 2.5) does not apply directly to the integers. More precisely, give an example of a property $P(n)$ pertaining to an integer $n$ such that $P(0)$ is true, and that $P(n)$ implies $P(n++)$ for all integers $n$, but that $P(n)$ is not true for all integers $n$. Thus induction is not as useful a tool for dealing with the integers as it is with the natural numbers. (The situation becomes even worse with the rational and real numbers, which we shall define shortly.)
+\end{q}
+\begin{proof}
+    Let $P(n)$ be the property $n \geq 0$ is true.
+    Suppose $P(0)$, $0=0$ so $0 \geq 0$ is true. 
+    Assume inductively that $n \geq 0$ is true. 
+    Then there exists some $x \in \mathbb{N}$ such that $n = 0 + x$. 
+    By the definition of addition for integers $n+1 = (n - 0) + (1 - 0)$. 
+    Then by substitution, 
+    \begin{align*}
+        n+1 &= ((0 + x) - 0) + (1 - 0) \\
+        &= (0 + x) + 1 \\
+        &= 0 + (x+1) \\
+        & \geq 0
+    \end{align*}
+    So $n \geq 0 \implies n+1 \geq 0$ for all integers.
+    However, if $n$ is the negation of a positive natural number, then $-n > 0$, and thus $n < 0$, so $P(n)$ cannot be true for all $n$.
+\end{proof}
+
+\subsection{}
+
+\begin{q}
+    Show that the square of an integer is always a natural number. That is to say, prove that $n^2 \geq 0$ for every integer $n$.
+\end{q}
+
+\begin{proof}
+    By the trichotomy of integers, $n$ is a positive natural number, $0$, xor the negation of a positive natural number.
+    A natural number multiplied by another natural number is a natural number.
+    So if $n$ is either $0$ or a positive natural number, $n^2$ is a natural number.
+    Each natural number is greater than or equal to $0$, so $n^2 \geq 0$.
+    Suppose $n$ is the negation of positive natural number $a$, i.e. $n \times n = (0-a) \times (0-a)$. 
+    By applying the definition of multiplication, $(0 \times 0 + a \times a)-(0 \times a + a \times 0)$. 
+    Simplifying this we have $n^2 = (a \times a)$. 
+    Since $a$ is a natural number, $(a \times a )$ is as well, so $n^2$ is a natural number again.
+    Thus $n^2 \geq 0$ in all three cases.
+\end{proof}
 \end{document}
