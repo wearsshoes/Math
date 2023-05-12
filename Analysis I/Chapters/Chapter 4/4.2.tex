@@ -135,18 +135,16 @@ Let $x = a/b$, $y = c/d$, and $z = e/f$ for integers $a, b, c, d, e, f$ where $b
     \end{q}
     \begin{proof}[Lemma]
         First we need to prove $(-a)/b = a/(-b)$, so we can write the proof without loss of generality.
-        \begin{lxl}
-            \item $(-a)/b = a/(-b) \iff -a(-b) = ab$. 
-            \item $-a(-b)=$
-            \item $(-1)(-1)(ab)=$
-            \item $(0$---$1)(0$---$1)(ab)=$
-            \item $((0*0 + 1*1)-(0*1+1*0))(ab)=$
-            \item $((0+1)-(0+0))(ab)=$
-            \item $(1-0)(ab)=$
-            \item $1(ab)=$
-            \item $ab$.
-            \item Thus $(-a)/b = a/(-b)$ as desired. 
-        \end{lxl}
+        $(-a)/b = a/(-b) \iff -a(-b) = ab$. We can prove this in either direction.
+        \begin{align*}
+            -a(-b) &= (-1)(-1)(ab) \\
+            &= (0---1)(0---1)(ab) \\
+            &= ((0*0 + 1*1)-(0*1+1*0))(ab) \\
+            &= ((0+1)-(0+0))(ab) \\
+            &= (1-0)(ab) \\
+            &= 1(ab) \\
+            &= ab.
+        \end{align*} 
     \end{proof}
     \begin{proof}[Lemma]
         We wish to prove $a/b < c/d \iff ad < bc$, and $b, d \neq 0$.
