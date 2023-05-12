@@ -2,6 +2,196 @@
 \begin{document}
 \exerciseset{4}{2}{The rationals}
 
+\subsection{}
+\begin{q}
+    Show that the definition of equality for the rational numbers is reflexive, symmetric, and transitive. (Hint: for transitivity, use Corollary 4.1.9.)
+\end{q}
 
+\begin{proof}
+    We first prove reflexivity, 
+    which holds if $a // b = a // b$, $b \neq 0$.
+    $ab=ab$ because reflexivity holds for the integers, 
+    and $ab=ab \iff a // b = a // b$ by definition.
+
+    Next we tackle symmetry, 
+    which holds if  $a // b = c // d \iff c // d = a // b$. 
+    We have $a // b = c // d \iff ad = bc$, $b \neq 0$ and $d \neq 0$.
+    We also have $c // d = a // b \iff cb = da$. 
+    By commutativity of multiplication on the integers $ad = da$ and $bc = cb$.
+    So by symmetry for the integers $ad = bc \iff cb = ad$, 
+    and thus $a // b = c // d \iff c // d = a // b$.     
+
+    Finally for transitivity, which holds if $a // b = c // d$ and $c // d = e // f$ implies $a // b = e // f$.
+    We have $a // b = c // d \iff ad = bc$,
+    we also have $c // d = e // f \iff cf = de$,
+    where $b, d, f$ are all nonzero.
+    By the cancellation rule (Lemma 4.1.9), $adf = bcf$.
+    Also by 4.1.9, $bcf = bde$.
+    By transitivity for the integers, $adf = bde$, 
+    and by 4.1.9 again $af = be$,
+    so $a // b = e // f$ as desired.
+\end{proof}
+\pagebreak
+
+\addtocounter{subsection}{1}
+\subsection{}
+\begin{q}
+    Prove the remaining components of Proposition 4.2.4.    
+\end{q}
+
+I will only prove a subset of these, using $x = a // b$ , $y = c // d$ , and $z = e // f$ for integers $a, c, e$ and nonzero integers $b, d, f$.
+\begin{enumerate}
+    \item
+        \begin{q}
+            $(x y)z = x(yz)$
+        \end{q}
+        \begin{proof}
+            \begin{align*}
+                ((a // b)(c // d))(e // f) &= \\
+                (ac // bd)(e // f) &= \\
+                (ace // bdf) & \\
+                (a // b)((c // d)(e // f)) &= \\
+                (a // b)(ce // df) &= \\
+                (ace // bdf) &\\
+            \end{align*}
+        \end{proof}
+    \item 
+        \begin{q}
+            $x(y + z) = x y + x z$
+        \end{q}
+        \begin{proof}
+            \begin{align*}
+                (a // b)((c // d) + (e // f)) &= \\
+                (a // b)((cf + de) // (df)) &= \\
+                (a(cf + de) // bdf) &= \\
+                (acf + ade) // bdf & \\
+                (a // b)(c // d) + (a // b)(e // f) & =\\
+                (ac // bd) + (ae // bf) &= \\
+                (acbf + aebd) // (bdbf) &= \\
+                (acbf + aebd) // (bdbf) &= \\
+                ((acf + aed) // bdf) * (b // b) &= \\
+                ((acf + aed) // bdf) * (1 // 1) &= \\
+                ((acf + aed) // bdf) * 1 &= \\
+                ((acf + aed) // bdf) &= \\
+                ((acf + ade) // bdf) & \\
+            \end{align*}
+        \end{proof} 
+\end{enumerate}
+
+\addtocounter{subsection}{1}
+\subsection{}
+\begin{q}
+    Proposition 4.2.9 (Basic properties of order on the rationals) Let $x, y,z$ be rational
+numbers. Then the following properties hold.
+\end{q}
+
+Let $x = a/b$, $y = c/d$, and $z = e/f$ for integers $a, b, c, d, e, f$ where $b, d, f$ are nonzero.
+\begin{enumerate}
+    \item
+    \begin{q}
+         (Order trichotomy) Exactly one of the three statements $x = y$, $x < y$, or $x > y$ is true.
+    \end{q}
+    \begin{proof}
+        $x < y \implies x \neq y$
+
+        $x > y \implies x \neq y$
+
+        Then by contrapositive $x = y$ implies both $x < y$ and $x > y$ are false.
+
+        $x > y \iff x-y$ is positive
+
+        $x < y \iff x-y$ is negative
+
+        By the trichotomy of rationals $x-y$ cannot be both positive and negative. So $x > y$ and $x < y$ are exclusive.
+    \end{proof}
+    \item 
+    \begin{q}
+        (Order is antisymmetric) One has $x < y$ if and only if $y > x$.
+    \end{q}
+    \begin{proof}
+        We have two directions to prove.
+
+        Suppose $x < y$. 
+        By def of order on rationals $x-y$ is negative, i.e 
+        $(ad - bc) / bd$ is negative.
+        Then by def of negative on rationals $-(ad - bc)$ and $bd$ are both positive integers.
+        $-(ad - bc) = (cb - da)$ by negation and commutativity.
+        Therefore $(cb - da) / bd$ is a positive rational, which is equal to $(y-x)$.
+        Thus, $y > x$.
+
+        Suppose $y > x$. 
+        Then $y-x$ is positive, i.e.
+        $(cb - da) / db$ is positive.
+        Then $(cb - da)$ and $(db)$ are both positive integers.
+        If $(cb - da)$ is positive, its negation $-(cb - da)$ is negative.
+        We know $-(cb - da) = (ad - bc)$ by negation and commutativity.
+        Then $(ad - bc) / db$ is a negative rational. 
+        Then so is $(x-y)$.
+        Thus, $x < y$.
+    \end{proof}
+    \item 
+    \begin{q}
+        (Order is transitive) If $x < y$ and $y < z$, then $x < z$.
+    \end{q}
+    \begin{proof}[Lemma]
+        First we need to prove $(-a)/b = a/(-b)$, so we can write the proof without loss of generality.
+        \begin{lxl}
+            \item $(-a)/b = a/(-b) \iff -a(-b) = ab$. 
+            \item $-a(-b)=$
+            \item $(-1)(-1)(ab)=$
+            \item $(0$---$1)(0$---$1)(ab)=$
+            \item $((0*0 + 1*1)-(0*1+1*0))(ab)=$
+            \item $((0+1)-(0+0))(ab)=$
+            \item $(1-0)(ab)=$
+            \item $1(ab)=$
+            \item $ab$.
+            \item Thus $(-a)/b = a/(-b)$ as desired. 
+        \end{lxl}
+    \end{proof}
+    \begin{proof}[Lemma]
+        We wish to prove $a/b < c/d \iff ad < bc$, and $b, d \neq 0$.
+        From above, we can assume without loss of generality that $b > 0$ and $d > 0$ (otherwise choose $-a/-b$ and $-c/-d$). 
+        Suppose $a/b < c/d$.
+        We know $a/b < c/d \iff (a/b - c/d)$ is a negative rational number.
+        By definition of subtration $(ad - bc) / bd$ is negative. 
+        By our generality assumption, $bd$ is positive, so $(ad-bc)$ is negative.
+        Suppose $ad = bc$, then $(ad - bc) = 0$, so by contradiction $ad \neq bc$. 
+        There must be some $m$ such that $(ad - bc) + m = 0$, 
+        so there exists some nonzero $m$ such that $ad+m=bc$.
+        Thus by the previous two statements, $ad < bc$.
+        Suppose $ad < bc$.
+        Then $ad+m=bc$, $m \neq 0$, and $ad - bc = 0 - m$, or $(ad-bc)$ is negative. 
+        Since we have assumed $bd$ is positive, the rational $(ad - bc) / bd$ is negative. 
+        $(ad - bc) / bd = (a/b - c/d)$, so the latter is negative too.
+        Thus $a/b < c/d$.
+        
+    \end{proof}
+    \begin{proof}
+        Without loss of generality, assume $b, d, f > 0$. 
+        (If $b>0$, 
+        then set $a'=a,b'=b$; 
+        otherwise set $a'=-a, b'=-b$, 
+        and note that in either case $x=a'/b'$ and $b'>0$.) 
+        Likewise for $y, z$.
+        \begin{lxl}
+            \item Suppose $x < y$ and $y < z$.
+            \item Then $ad < bc$ by above lemma.
+            \item Likewise, $cf < de$. 
+            \item $adf < bcf$ since we assume $f$ is positive, and Lemma 4.1.11c (positive multiplication preserves order on integers).
+            \item $bcf < deb$ since we assume $b$ is positive.
+            \item $adf < deb$ by transitivity of order on integers.
+            \item $af < eb$ since we assume $d$ is positive.
+            \item $x < z$.
+        \end{lxl}
+    \end{proof}
+    \item 
+        \begin{q}
+           (Addition preserves order) If $x < y$, then $x + z < y + z$. 
+        \end{q}
+    \item 
+        \begin{q}
+            (Positive multiplication preserves order) If $x < y$ and $z$ is positive, then $x z < yz$.
+        \end{q}
+\end{enumerate}
 
 \end{document}
