@@ -19,7 +19,7 @@
     \end{aligned}
     \end{equation*}
 
-    \begin{lxl}
+    \begin{linebyline}
             \item First we show $f^{-1}(V) \subseteq (f^{-1})(V)$.
             \item Let $z \in f^{-1}(V)$. 
             \item Then $z \in X$ and $f(z) \in V$. 
@@ -27,7 +27,7 @@
             \item Thus $f(z) \in V \implies y \in V$. 
             \item Since $f$ is bijective, for all $x$ in $X$, $x = f^{-1}(y) = f^{-1}(f(x))$.
             \item Thus $z \in X \implies z = f^{-1}(y)$. 
-    \end{lxl}
+    \end{linebyline}
 \end{proof}
 
 \subsection{}
@@ -110,7 +110,7 @@
         \item $f(A \cap B) \subseteq f(A) \cap f(B)$,
         \begin{proof}
             We prove this statement by showing every element of $f(A \cap B)$ is an element of $f(A) \cap f(B)$.
-            \begin{lxl}
+            \begin{linebyline}
                 \item Let $y$ be an arbitrary element of $f(A \cap B)$. 
                 \item $A \subseteq X$ and $B \subseteq X \implies A \cap B \subseteq X$. 
                 \item By definition the image of $A \cap B$ under $f$ is $\Set{f(x)}{x \in A \cap B}$. 
@@ -122,19 +122,19 @@
                 \item $y = f(x)$ for some $x \in A$ and $y = f(x)$ for some $x \in B$
                 \item $y \in \Set{f(x)}{x \in A}$ and y $\in \Set{f(x)}{x \in B}$
                 \item $y \in f(A) \cap f(B)$, as desired.
-            \end{lxl}
+            \end{linebyline}
         \end{proof}    
 
         \item $f(A) \setminus f(B) \subseteq f(A \setminus B)$,
         \begin{proof}
             We prove this statement by showing every element of $f(A) \setminus f(B)$ is an element of $f(A \setminus B)$.
-            \begin{lxl}
+            \begin{linebyline}
                 \item Let $y \in f(A) \setminus f(B)$ be arbitrary. 
                 \why{Conditional introduction}
                 \item $y \in f(A)$ and $y \notin f(B)$. 
                 \item $\exists x \in A \; y = f(x)$
                 \item Suppose $x$ such that $x \in A$ and $y = f(x)$
-                \begin{lxl}
+                \begin{linebyline}
                     \item $x \in A$
                     \item $y = f(x)$
                     \item $\forall z \in B \; y \neq f(z)$
@@ -146,10 +146,10 @@
                     \item $ x \in A$, $x \notin B$, and $y = f(x)$.
                     \item $y = f(x)$ and $x \in A \setminus B$.
                     \item $y \in \Set{y}{y = f(x)$ for $x \in A \setminus B}$.
-                \end{lxl}
+                \end{linebyline}
                 \item $y \in f(A \setminus B)$ \why{Existential elimination}
                 \item $y \in f(A) \setminus f(B) \implies y \in f(A \setminus B)$ \why{Conditional elimination}
-            \end{lxl}
+            \end{linebyline}
             Thus $f(A) \setminus f(B) \subseteq f(A \setminus B)$.
         \end{proof}
         
@@ -157,7 +157,7 @@
         \begin{proof}
             We prove this statement by showing every element of $f(A \cup B)$ is an element of $f(A) \cup f(B)$ and vice versa.
             First we do the forward direction:
-            \begin{lxl}
+            \begin{linebyline}
                 \item Let $y \in f(A \cup B)$ be arbitrary.
                 \item $A \in X$
                 \item $B \in X$
@@ -165,50 +165,50 @@
                 \item $y \in \Set{f(x)}{x \in A \cup B}$
                 \item $\exists x$ such that $x \in A \cup B$ and $y=f(x)$
                 \item Suppose $x$ such that $x \in A \cup B$ and $y=f(x)$
-                \begin{lxl}
+                \begin{linebyline}
                     \item $y = f(x)$
                     \item $x \in A \cup B$
                     \item $x \in A$ or $x \in B$
                     \item ($x \in A$ and $y=f(x)$) or ($x \in B$ and $y=f(x)$)
-                    \begin{lxl}
+                    \begin{linebyline}
                         \item{test}
-                    \end{lxl}
+                    \end{linebyline}
                     \item $y \in \Set{f(x)}{x \in A}$ or $y \in \Set{y=f(x)}{x \in B}$
                     \item $y \in f(A)$ or $y \in f(B)$
                     \item $y \in f(A) \cup f(B)$
-                \end{lxl}
+                \end{linebyline}
                 \item $y \in f(A \cup B) \implies y \in f(A) \cup f(B)$
                 \item $f(A \cup B) \subseteq f(A) \cup f(B)$
-            \end{lxl}
+            \end{linebyline}
             Now in the backwards direction.
-            \begin{lxl}
+            \begin{linebyline}
                 \item Let $y \in f(A) \cup f(B)$ be arbitrary.
                 \item $y \in f(A)$ or $y \in f(B)$
                 \item Case $y \in f(A)$
-                \begin{lxl}
+                \begin{linebyline}
                     \item $y \in \Set{f(x)}{x \in A}$ 
                     \item $\exists x$ such that ($x \in A$ and $y=f(x)$)
                     \item Suppose $x$ such that ($x \in A$ and $y=f(x)$) 
-                    \begin{lxl}
+                    \begin{linebyline}
                         \item $x \in A$ and $y=f(x)$
-                    \end{lxl}
-                \end{lxl}
+                    \end{linebyline}
+                \end{linebyline}
                 \item Case $y \in f(B)$
-                \begin{lxl}
+                \begin{linebyline}
                     \item $y \in \Set{y=f(x)}{x \in B}$
                     \item $\exists x$ such that ($x \in B$ and $y=f(x)$)
                     \item Suppose $x$ such that ($x \in B$ and $y=f(x)$)
-                    \begin{lxl}
+                    \begin{linebyline}
                         \item $x \in B$ and $y=f(x)$
-                    \end{lxl}
-                \end{lxl}
+                    \end{linebyline}
+                \end{linebyline}
                 \item $(x \in B$ and $y=f(x))$ or ($x \in A$ and $y=f(x)$) 
                 \item $y=f(x)$ and ($x \in A$ or $x \in B$) \why{Distributivity}
                 \item $y=f(x)$ and ($x \in A \cup B$)
                 \item $y \in \Set{f{x}}{x \in A \cup B}$
                 \item $y \in f(A) \cup f(B) \implies y \in \Set{f(x)}{x \in A \cup B}$
                 \item $f(A) \cup f(B) \subseteq f(A \cup B)$
-            \end{lxl}
+            \end{linebyline}
             Thus we have $f(A \cup B) = f(A) \cup f(B)$.
         \end{proof}
         
@@ -221,7 +221,7 @@
     \begin{proof}
         I want to first try to prove $f(A \cap B) = f(A) \cap f(B)$. Since I already have $f(A \cap B) \subseteq f(A) \cap f(B)$, I just need $f(A) \cap f(B) \subseteq f(A \cap B)$.
         
-        \begin{lxl}
+        \begin{linebyline}
             \item Suppose $y \in f(A) \cap f(B)$
             \item $y \in f(A)$ and $y \in f(B)$
             \item $y \in \Set{f(x)}{x \in A}$
@@ -229,14 +229,14 @@
             \item Suppose $x$ st. $y = f(x)$ and $x \in A$
             \item $y \in \Set{f(x)}{x \in B}$
             \item $\exists x$ st. $y = f(x)$ and $x \in A$
-        \end{lxl}
+        \end{linebyline}
 
         Next I'm going to try to prove $f(A) \setminus f(B) = f(A \setminus B)$. I already have $f(A) \setminus f(B) \subseteq f(A \setminus B)$ and I just need $f(A \setminus B) \subseteq f(A) \setminus f(B)$.
-        \begin{lxl}
+        \begin{linebyline}
             \item Suppose $y \in f(A \setminus B)$.
             \item $\exists x$ such that $y=f(x)$ and $x \in A \setminus B$.
             \item Suppose $x$ such that $y=f(x)$ and $x \in A \setminus B$.
-            \begin{lxl}
+            \begin{linebyline}
                 \item $y=f(x)$
                 \item $x \in A \setminus B$
                 \item $x \in A$ and $x \notin B$
@@ -245,8 +245,8 @@
                 \item $y \in f(A)$
                 \item $y=f(x)$ and $x \notin B$
                 \item \sout{$y \in \Set{f(x)}{x \notin B}$} (not useful!)
-            \end{lxl}
-        \end{lxl}
+            \end{linebyline}
+        \end{linebyline}
         \begin{xx}
             not sure where to go from here
         \end{xx}
@@ -290,7 +290,7 @@
         \end{q}
         \begin{proof}                                    
         We need to prove $\Set{Y}{Y \subseteq X}$ exists. We construct a set that we know exists, and then prove that it is equal to $\Set{Y}{Y \subseteq X}$.
-        \begin{lxl}
+        \begin{linebyline}
             \item Let $X$ be an arbitrary set.
             \item Let $F$ be the set $\{0, 1\}^{X}$ 
             \item $f \in F \iff f : X \to \{0,1\}$ \why{power set axiom}
@@ -298,29 +298,29 @@
             \item Let $Z$ be the set $\Set{a}{P(f, a)$ is true for some $f \in F}$
             \item $z \in Z \iff P(f, z) $ is true for some $f \in F$. \why{axiom of replacement}
             \item Suppose $Y \in Z$.
-            \begin{lxl}
+            \begin{linebyline}
                 \item $P(f, Y)$ is true for some $f \in F$ \why{5}
                 \item Suppose $g \in F$ such that $P(g, Y)$
-                \begin{lxl}
+                \begin{linebyline}
                     \item $Y=g^{-1}(\{1\})$ \why{3}
                     \item $Y \subseteq X$ \why{def of inverse image}
-                \end{lxl}
+                \end{linebyline}
                 \item $Y \subseteq X$
-            \end{lxl}
+            \end{linebyline}
             \item $\forall Y, \; Y \in Z \implies Y \subseteq X$
             \item Suppose $Y \subseteq X$.
-            \begin{lxl}
+            \begin{linebyline}
                 \item Let $g: X \to \{0, 1\} = x \mapsto 1$ for $x \in Y$ and $x \mapsto 0$ otherwise. 
                 \item $g \in F$ \why{3}
                 \item $Y = g^{-1}(\{1\})$ \why{7.5.1}
                 \item $P(g, Y)$ \why{4}
                 \item $Y \in Z$ \why{6}
-            \end{lxl}
+            \end{linebyline}
             \item $\forall Y, \; Y \subseteq X \implies Y \in Z$
             \item $\forall z, \; z \in Z \iff z \in \Set{Y}{Y \subseteq X}$. \why{axiom of set equality}
             \item $Z = \Set{Y}{Y \subseteq X}$
             \item $\Set{Y}{Y \subseteq X}$ is a set.
-        \end{lxl}
+        \end{linebyline}
 
     Let X be arbitrary. 
     We need to prove $\Set{Y}{Y \subseteq X}$ exists. 
@@ -359,7 +359,7 @@
 
 \begin{proof}
     We wish to show that $Y'^{X'}$ defined as $\Set{f'}{f' : X' \to Y'}$ exists.
-\begin{lxl}
+\begin{linebyline}
     \item Let $X$, $Y$ be arbitrary sets.
     \item For $X' \subseteq X$ and $Y' \subseteq Y, \; f' : X' \to Y'$
     \item $\Set{f}{f : X \to Y}$ is a set. \why{power set axiom}
@@ -373,7 +373,7 @@
     \item $a \in X' \to Y'$
     \item $a \in \Set{f'}{f' : X' \to Y'}$ \why{axiom of replacement}
     \item $\Set{f'}{f' : X' \to Y'}$ is a set.
-\end{lxl}    
+\end{linebyline}    
 \end{proof}
     \begin{xx}
     not proved :(     
@@ -421,13 +421,13 @@
     \begin{proof}
     We need to show that every element of $\bigcup_{\alpha \in I} A_\alpha \cup \bigcup_{\alpha \in J} A_\alpha$ is also in $\bigcup_{\alpha \in I \cup J} A_\alpha$ and vice versa. We begin in the forward direction.
         \begin{xx}
-        \begin{lxl}
+        \begin{linebyline}
             \item
-        \end{lxl}
+        \end{linebyline}
     Now in reverse:
-        \begin{lxl}
+        \begin{linebyline}
             \item
-        \end{lxl}
+        \end{linebyline}
         \end{xx}
     \end{proof}
 
@@ -440,9 +440,9 @@
 \begin{proof}
     
     \begin{xx}
-    \begin{lxl}
+    \begin{linebyline}
         
-    \end{lxl}
+    \end{linebyline}
     \end{xx}
 \end{proof}
 

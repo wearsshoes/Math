@@ -63,18 +63,18 @@
 	"prefix": [,"suppose", "subproof"],
 		"body": [
 			"Suppose $1"
-			"\\begin{lxl}",
+			"\\begin{linebyline}",
 			"\t\\item$0",
-			"\\end{lxl}"
+			"\\end{linebyline}"
 		  ],
 		"description": "Makes a subproof"
 	},
 	"Resume proof": {
 		"prefix": ["resume"],
 			"body": [
-				"\\begin{lxl}[resume]",
+				"\\begin{linebyline}[resume]",
 				"\t\\item$0",
-				"\\end{lxl}"
+				"\\end{linebyline}"
 			  ],
 			"description": "Resumes a proof after conversation"
 		}

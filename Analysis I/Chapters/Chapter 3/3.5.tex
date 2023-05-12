@@ -11,37 +11,37 @@
 
 \begin{proof}
     We are asked to prove that the n-tuples $x$ and $y$ are equal for all $1 \leq i \leq n$ by showing that their components $x_i$ and $y_i$ are equal for all  $1 \leq i \leq n$, and vice versa. We rewrite our definitions for clarity:
-    \begin{lxl}
+    \begin{linebyline}
         \item Let $X$ be any set. 
         \item Let $x : \Set{i \in \mathbb{N}}{1 \leq i \leq n} \to X$
         \item Let $x_i = x(i)$ 
         \item Let $x = (x_i)_{1 \leq i \leq n}$
-    \end{lxl}
+    \end{linebyline}
     We proceed in the forward direction.
-    \begin{lxl}[resume]
+    \begin{linebyline}[resume]
         \item Suppose $(x_i)_{1 \leq i \leq n} = (y_i)_{1 \leq i \leq n}$.
-        \begin{lxl}
+        \begin{linebyline}
             \item $x = y$ \why{line 4}
             \item Suppose ${1 \leq i \leq n}$
-            \begin{lxl}
+            \begin{linebyline}
                 \item $i \in \Set{i \in \mathbb{N}}{1 \leq i \leq n}$
                 \item $x(i)$=$y(i)$ \why{line 5.1}
                 \item $x_i=y_i$ \why{line 3}
-            \end{lxl}
+            \end{linebyline}
             \item $\forall i \in \mathbb{N} \quad {1 {\leq} i {\leq} n} \implies x_i=y_i$
-        \end{lxl}
+        \end{linebyline}
         \item $(x_i)_{1 \leq i \leq n} = (y_i)_{1 \leq i \leq n} \implies \bigl( \forall i \in \mathbb{N} \quad {1 {\leq} i {\leq} n} \implies x_i=y_i \bigr)$.
-    \end{lxl}
+    \end{linebyline}
     Now in the reverse direction:
-    \begin{lxl}[resume]
+    \begin{linebyline}[resume]
         \item Suppose $i \in \mathbb{N}$ st. ${1 {\leq} i {\leq} n} \implies x_i=y_i$.
-        \begin{lxl}
+        \begin{linebyline}
             \item $i \in \Set{i \in \mathbb{N}}{1 \leq i \leq n}$ \why{line 2}
             \item $x_i=y_i$ \why{slightly awkward MP}
             \item $(x)_{1 \leq i \leq n}(i)=y_{1 \leq i \leq n}(i)$ \why{lines 3, 4}
-        \end{lxl}
+        \end{linebyline}
         \item $\forall i \in \mathbb{N} \quad \bigl({1 {\leq} i {\leq} n} \implies x_i=y_i \bigr) \implies (x)_{1 \leq i \leq n}(i)=y_{1 \leq i \leq n}(i)$ 
-    \end{lxl}\item
+    \end{linebyline}\item
     Thus they are equal.
 \end{proof}
 \begin{xx}
@@ -53,13 +53,13 @@
 \end{q}
 
 \begin{proof}
-\begin{lxl}
+\begin{linebyline}
     \item Let 
     \item Suppose $(X_i){1 \leq i \leq n}$.
-    \begin{lxl}
+    \begin{linebyline}
         \item
-    \end{lxl}
-\end{lxl}
+    \end{linebyline}
+\end{linebyline}
 \end{proof}
 \begin{xx}
     Unsure how to approach.
@@ -76,73 +76,73 @@
         \end{q}
         \begin{proof}
             We need to show every element of $A \times (B \cup C)$ is also in $(A \times B) \cup (A \times C)$ and vice versa. We first prove the forward direction:
-            \begin{lxl}
+            \begin{linebyline}
                 \item Suppose $a \in A \times (B \cup C)$
-                \begin{lxl}
+                \begin{linebyline}
                     \item $a \in \Set{(x,y)}{x \in A$ and $y \in (B \cup C)}$
                     \item $a \in \Set{(x,y)}{x \in A$ and ($y \in B$ or $y \in C)}$
                     \item $a \in \Set{(x,y)}{x \in A$ and ($y \in B$ or $y \in C)}$
                     \item $a \in \Set{(x,y)}{(x \in A$ and $y \in B)$ or $(x \in A$ and $y \in C)}$
                     \item $a = (x,y)$ and $\bigl( (x \in A$ and $y \in B)$ or $(x \in A$ and $y \in C) \bigr)$ for some $x \in A$ and some $y \in B$
                     \item Let $x$ and $y$ st. $a=(x,y)$
-                    \item \begin{lxl}
+                    \item \begin{linebyline}
                         \item $(x \in A$ and $y \in B)$ or $(x \in A$ and $y \in C)$
                         \item Case $(x \in A$ and $y \in B)$
-                        \begin{lxl}
+                        \begin{linebyline}
                             \item $a \in \Set{(x,y)}{x \in A$ and $y \in B}$
                             \item $a \in (A \times B)$
-                        \end{lxl}
+                        \end{linebyline}
                         \item Case $(x \in A$ and $y \in C)$
-                        \begin{lxl}
+                        \begin{linebyline}
                             \item $a \in \Set{(x,y)}{x \in A$ and $y \in C}$
                             \item $a \in (A \times C)$
-                        \end{lxl}
+                        \end{linebyline}
                         \item $a \in (A \times B)$ or $a \in (A \times C)$
                         \item $a \in (A \times B) \cup (A \times C)$
-                    \end{lxl}
-                \end{lxl}
+                    \end{linebyline}
+                \end{linebyline}
                 \item $a \in A \times (B \cup C) \implies a \in (A \times B) \cup (A \times C)$
                 \item $A \times (B \cup C) \subseteq (A \times B) \cup (A \times C)$
-            \end{lxl}
+            \end{linebyline}
             \item Now this is mostly invertible:
-            \begin{lxl}[resume]
+            \begin{linebyline}[resume]
                 \item Suppose $a \in (A \times B) \cup (A \times C)$
-                \begin{lxl}
+                \begin{linebyline}
                     \item $a \in (A \times B)$ or $a \in (A \times C)$
                     \item Case $a \in (A \times B)$
-                    \begin{lxl}
+                    \begin{linebyline}
                         \item $a \in \Set{(x,y)}{x \in A$ and $y \in B}$
                         \item $\exists x \in A, y \in B $ st. $a = (x,y)$
                         \item Let $x, y$ st. $a = (x,y)$
-                        \begin{lxl}
+                        \begin{linebyline}
                             \item $(x \in A$ and $y \in B$)
                             \item $(x \in A$ and $x \in B)$ or $(x \in A$ and $x \in C)$
                             \item $a = (x,y)$ and $\bigl( (x \in A$ and $x \in B)$ or $(x \in A$ and $y \in C) \bigr)$
                             \item $a \in \Set{(x,y)}{(x \in A$ and $y \in B)$ or $(x \in A$ and $y \in C)}$
 
-                        \end{lxl}
-                    \end{lxl}
+                        \end{linebyline}
+                    \end{linebyline}
                     \item Case $a \in (A \times C)$
-                    \begin{lxl}
+                    \begin{linebyline}
                         \item $a \in \Set{(x,y)}{x \in A$ and $y \in C}$
                         \item $\exists x \in A, y \in B $ st. $a = (x,y)$
                         \item Let $x, y$ st. $a = (x,y)$
-                        \begin{lxl}
+                        \begin{linebyline}
                             \item $(x \in A$ and $y \in C)$
                             \item $(x \in A$ and $x \in B)$ or $(x \in A$ and $x \in C)$
                             \item $a = (x,y)$ and $\bigl( (x \in A$ and $x \in B)$ or $(x \in A$ and $y \in C) \bigr)$
                             \item $a \in \Set{(x,y)}{(x \in A$ and $y \in B)$ or $(x \in A$ and $y \in C)}$
 
-                        \end{lxl}
-                    \end{lxl}
+                        \end{linebyline}
+                    \end{linebyline}
                     \item $a \in \Set{(x,y)}{(x \in A$ and $y \in B)$ or $(x \in A$ and $y \in C)}$ \why{4.2.3.4 and 4.3.3.4}
                     \item $a \in \Set{(x,y)}{x \in A$ and $(y \in B$ or $y \in C)}$
                     \item $a \in \Set{(x,y)}{x \in A$ and $y \in (B \cup C)}$
                     \item $a \in A \times (B \cup C)$
-                \end{lxl}
+                \end{linebyline}
                 \item $a \in (A \times B) \cup (A \times C) \implies a \in A \times (B \cup C)$
                 \item $(A \times B) \cup (A \times C) \subseteq A \times (B \cup C)$
-            \end{lxl}
+            \end{linebyline}
             And thus we have $A \times (B \cup C) = (A \times B) \cup (A \times C)$
         \end{proof}
         \begin{xx}
@@ -192,20 +192,20 @@ $A \times (B \cap C) = (A \times B) \cap (A \times C)$,
 
 \begin{proof}
     Rewrite the definitions:
-    \begin{lxl}
+    \begin{linebyline}
         \item Let $X$ and $Y$ be arbitrary sets
         \item Let $\pi_{X\times Y\to X} : X \times Y \to X$ be the map $\pi_{X\times Y\to X}(x, y) := x$
         \item Let $\pi_{X\times Y\to Y} : X \times Y \to Y$ be the map $\pi_{X\times Y\to Y}(x, y) := y$
         \item Let $f : Z \to X$ and $g : Z \to Y$ be arbitrary functions.
-    \end{lxl}
+    \end{linebyline}
     We first want to show $h : Z \to X \times Y$ exists.
-    \begin{lxl}[resume]
+    \begin{linebyline}[resume]
         \item Suppose 
-    \end{lxl}
+    \end{linebyline}
     Next we want to show it is unique.
-    \begin{lxl}[resume]
+    \begin{linebyline}[resume]
         \item
-    \end{lxl}
+    \end{linebyline}
     Thus there exists a unique $h$ that satisfies $\pi_{X\times Y\to X} \circ h = f$ and $\pi_{X\times Y\to Y} \circ h = g$.
 \end{proof}
 \begin{xx}
@@ -219,10 +219,10 @@ $A \times (B \cap C) = (A \times B) \cap (A \times C)$,
 
 \begin{proof}
     We first show the forward direction.
-    \begin{lxl}
+    \begin{linebyline}
         \item By lemma 3.5.11 If each $X_i$ is nonempty $\prod_{i=1}^n X_i$ is nonempty.
         \item The contrapositive states $\prod_{i=1}^n X_i$ is empty implies some $X_i$ is empty.
-    \end{lxl}
+    \end{linebyline}
 
     Let $k$ st. $X_k$ is empty.
         Suppose $a$ in $\prod_{i=1}^n X_i$.    
@@ -249,38 +249,38 @@ $A \times (B \cap C) = (A \times B) \cap (A \times C)$,
 
 \begin{proof}
     We are proving set equality, so each element of $(\bigcup_{\alpha \in I} A_{\alpha}) \cap (\bigcup_{\beta \in J} B_{\beta})$ needs to be in $\bigcup_{(\alpha, \beta) \in I \times J} (A_{\alpha} \cap B_{\beta})$ and vice versa.
-    \begin{lxl}
+    \begin{linebyline}
         \item Suppose $x \in (\bigcup_{\alpha \in I} A_{\alpha}) \cap (\bigcup_{\beta \in J} B_{\beta})$
-        \begin{lxl}
+        \begin{linebyline}
             \item $x \in (\bigcup_{\alpha \in I} A_{\alpha})$
             \item $x \in (\bigcup_{\beta \in J} B_{\beta})$
             \item Suppose $(i,j) \in I \times J$ such that $x \in A_i$ and $x \in B_j$
-            \begin{lxl}
+            \begin{linebyline}
                 \item $x \in A_i$ and $x \in B_j$
                 \item $x \in (A_i \cap B_j)$
                 \item $i \in I$ and $j \in J$
                 \item $x \in \bigcup_{(\alpha, \beta) \in I \times J} (A_{\alpha} \cap B_{\beta})$
-            \end{lxl}
+            \end{linebyline}
             \item $x \in \bigcup_{(\alpha, \beta) \in I \times J} (A_{\alpha} \cap B_{\beta})$ \why{MP}
-        \end{lxl}
+        \end{linebyline}
         \item $x \in (\bigcup_{\alpha \in I} A_{\alpha}) \cap (\bigcup_{\beta \in J} B_{\beta}) \implies x \in \bigcup_{(\alpha, \beta) \in I \times J} (A_{\alpha} \cap B_{\beta})$
-    \end{lxl}
+    \end{linebyline}
     The reverse direction:
-    \begin{lxl}[resume]
+    \begin{linebyline}[resume]
         \item Suppose $x \in \bigcup_{(\alpha, \beta) \in I \times J} (A_{\alpha} \cap B_{\beta})$
-        \begin{lxl}
+        \begin{linebyline}
             \item $x \in (A_{\alpha} \cap B_{\beta})$ for some $(\alpha, \beta) \in I \times J$ 
             \item Suppose $(i, j) \in I \times J$ and $x \in (A_{i} \cap B_{j})$
-            \begin{lxl}
+            \begin{linebyline}
                 \item $x \in (A_{i} \cap B_{j})$
                 \item $x \in A_{i}$ and $x \in B_{j}$ 
-            \end{lxl}
+            \end{linebyline}
                 \item $x \in (\bigcup_{\alpha \in I} A_{\alpha})$
                 \item $x \in (\bigcup_{\beta \in J} B_{\beta})$
                 \item $x \in (\bigcup_{\alpha \in I} A_{\alpha}) \cap (\bigcup_{\beta \in J} B_{\beta})$
-        \end{lxl}
+        \end{linebyline}
         \item $x \in \bigcup_{(\alpha, \beta) \in I \times J} (A_{\alpha} \cap B_{\beta}) \implies x \in (\bigcup_{\alpha \in I} A_{\alpha}) \cap (\bigcup_{\beta \in J} B_{\beta})$ 
-    \end{lxl}
+    \end{linebyline}
     Then each has all the elements of the other, and they are equal.
 \end{proof}
 \begin{xx}
@@ -313,54 +313,54 @@ $A \times (B \cap C) = (A \times B) \cap (A \times C)$,
     \end{q}
     \begin{proof}
         We begin with the forward direction.
-        \begin{lxl}
+        \begin{linebyline}
             \item Assume $f : X \to Y$ = $g : X \to Y$.
             \item The graph of $f$ = $\{(x, f(x)) : x \in X\}$.
             \item The graph of $g$ = $\{(x, g(x)) : x \in X\}$.
-        \end{lxl}
+        \end{linebyline}
         We need to now show these two sets are equal, by showing all the elements of one are contained in the other and vice versa.
-        \begin{lxl}[resume]
+        \begin{linebyline}[resume]
             \item Suppose $a \in f$.
-            \begin{lxl}
+            \begin{linebyline}
                 \item $a \in \{(x, f(x)) : x \in X\}$
                 \item $\exists x \in X \; a = (x, f(x))$ 
                 \item Suppose $x \in X$ such that $a = (x, f(x))$
-                \begin{lxl}
+                \begin{linebyline}
                     \item $a = (x, f(x))$
                     \item $f(x)=g(x)$
                     \item $(x, f(x)) = (x, g(x))$
                     \item $a = (x, g(x))$
-                \end{lxl}
+                \end{linebyline}
                 \item $a \in \{(x, g(x)) : x \in X\}$
                 \item $a \in g$
-            \end{lxl}
+            \end{linebyline}
             \item The other way is basically the same.
             \item $a \in f \implies a \in g$ and $a \in g \implies a \in f$ so they are equal.
-        \end{lxl}
+        \end{linebyline}
         Now the converse.
         We've got to show that the functions are the same, which mean they have the same domain and codomain, and each input has the same output.
-        \begin{lxl}[resume]
+        \begin{linebyline}[resume]
             \item $\forall x \in X \; (\exists y \in Y$ such that $f(x)=y)$ and $(\forall y_1, y_2, f(x)=y_1$ and $f(x)=y_2 \implies y_1 = y_2)$
             \item Suppose $\{(x, f(x)) : x \in X\}$ = $\{(x, g(x)) : x \in X\}$.
             \item Let $x \in X$
-            \begin{lxl}
+            \begin{linebyline}
                 \item $(x, f(x))\in\{(x, f(x)) : x \in X\}$\why{by definition}
                 \item $(x, f(x))\in\{(x, g(x)) : x \in X\}$\why{line 8}
                 \item Suppose $(x, y)\in\{(x, g(x)) : x \in X\}$ and $f(x)\neq y$
-                \begin{lxl}
+                \begin{linebyline}
                     \item $g(x) = y$\why{$(x,y)\in \{(x, g(x)) : x \in X\}$ and definition of graph}
                     \item $g(x) = f(x)$\why{$(x,f(x))\in \{(x, g(x)) : x \in X\}$ and definition of graph}
                     \item $f(x)=y$, a contradiction!
-                \end{lxl}
+                \end{linebyline}
                 \item $f(x) = g(x)$
-            \end{lxl}
+            \end{linebyline}
             \item $\forall x\; f(x)=g(x)$
             \item $f=g$
             \item We already know $f$ and $g$ have the same domain and codomain.
-        \end{lxl} 
-        \begin{lxl}[resume]
+        \end{linebyline} 
+        \begin{linebyline}[resume]
             \item Thus they are equal!
-        \end{lxl}
+        \end{linebyline}
     \end{proof}
     \begin{xx}
         
