@@ -31,7 +31,6 @@
     and by 4.1.9 again $af = be$,
     so $a // b = e // f$ as desired.
 \end{proof}
-\pagebreak
 
 \addtocounter{subsection}{1}
 \subsection{}
@@ -47,12 +46,12 @@ I will only prove a subset of these, using $x = a // b$ , $y = c // d$ , and $z 
         \end{q}
         \begin{proof}
             \begin{align*}
-                ((a // b)(c // d))(e // f) &= \\
-                (ac // bd)(e // f) &= \\
-                (ace // bdf) & \\
-                (a // b)((c // d)(e // f)) &= \\
-                (a // b)(ce // df) &= \\
-                (ace // bdf) &\\
+                (xy)z &= ((a // b)(c // d))(e // f) \\
+                &= (ac // bd)(e // f) \\
+                &= (ace // bdf) \\
+                &= (a // b)(ce // df) \\
+                &= (a // b)((c // d)(e // f)) \\
+                &= x(yz) 
             \end{align*}
         \end{proof}
     \item 
@@ -61,19 +60,14 @@ I will only prove a subset of these, using $x = a // b$ , $y = c // d$ , and $z 
         \end{q}
         \begin{proof}
             \begin{align*}
-                (a // b)((c // d) + (e // f)) &= \\
-                (a // b)((cf + de) // (df)) &= \\
-                (a(cf + de) // bdf) &= \\
-                (acf + ade) // bdf & \\
-                (a // b)(c // d) + (a // b)(e // f) & =\\
-                (ac // bd) + (ae // bf) &= \\
-                (acbf + aebd) // (bdbf) &= \\
-                (acbf + aebd) // (bdbf) &= \\
-                ((acf + aed) // bdf) * (b // b) &= \\
-                ((acf + aed) // bdf) * (1 // 1) &= \\
-                ((acf + aed) // bdf) * 1 &= \\
-                ((acf + aed) // bdf) &= \\
-                ((acf + ade) // bdf) & \\
+                xy + xz &= (a // b)(c // d) + (a // b)(e // f) \\
+                &= (ac // bd) + (ae // bf) \\
+                &= (acbf + aebd) // (bdbf) \\
+                &= ((acf + aed) // bdf) \\
+                &= (a(cf + ed) // bdf) \\
+                &= (a // b)((cf + de) // (df)) \\
+                &= (a // b)((c // d) + (e // f)) \\
+                &= x(y+z)
             \end{align*}
         \end{proof} 
 \end{enumerate}
