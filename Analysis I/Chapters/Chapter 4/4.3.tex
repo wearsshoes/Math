@@ -2,13 +2,37 @@
 \begin{document}
 \exerciseset{4}{3}{Absolute value and exponentiation}
 
+\addtocounter{subsection}{2}
 \subsection{}
 \begin{q}
+    Let $x, y$ be rational numbers and let $n, m$ be natural numbers. 
+\end{q}
+\begin{enumerate}
+    \addtocounter{enumi}{1}
+    \item
+    \begin{q}
+        Suppose $n > 0$. Then we have $x^n = 0$ if and only if $x = 0$.
+    \end{q}
+    
+    \begin{proof}
+        We prove by induction.
+
+        Suppose $n = 1$ as a base case.
+        Since $x = x^1$, $x = 0 \iff x^n = 0$.
+        
+        Now suppose $x = 0 \iff x^n = 0$. 
+        We have $x^{n+1} = x^n * x$.
+        Now $x = 0$ or $x \neq 0$.
+        
+        If $x = 0$, $x^n = 0$ by inductive assumption. 
+        Then $x^{n+1} = 0 * 0 = 0$, so $x = 0 \implies x^{n+1} = 0$.
+
+        If instead $x \neq 0$, $x^n \neq 0$ we have $x^{n+1} \neq 0$, since the product of two nonzero rationals is a nonzero rational. (Extension of 4.1.8 that I haven't proved)
+
+        Thus we have $x^{n+1} = 0 \iff x = 0$, closing the induction, and so for all $x$, for all $n > 0$, we have $x^n = 0$ if and only if $x = 0$.
+    \end{proof}
+\end{enumerate}\begin{q}
     
 \end{q}
-
-\begin{proof}
-    
-\end{proof}
 
 \end{document}
