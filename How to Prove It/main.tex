@@ -1,0 +1,81 @@
+\documentclass[]{report}
+
+% Formatting
+\usepackage{geometry}
+\usepackage{blindtext}
+\usepackage[]{setspace}
+\usepackage[]{enumitem}
+\usepackage[]{xcolor}
+\usepackage[normalem]{ulem}
+
+% Math
+\usepackage[fleqn]{mathtools}
+\usepackage[]{amssymb}
+\usepackage[]{amsthm}
+\usepackage[]{tikz}
+
+% Subfiles
+\usepackage{refcount}
+\usepackage{xr-hyper}
+\usepackage{hyperref}
+\usepackage{subfiles} % Best loaded last in the preamble
+    
+%Titlecontent
+\title{How to Prove It: Exercises}
+\author{Rachel Shu}
+\date{\today}
+
+%Global variables and scripts
+\input{scripts.tex}
+
+%Formatting
+
+    %General
+    \geometry{letterpaper, portrait, margin=1in}
+    \onehalfspacing
+    \setlength{\parskip}{1em}
+    \setlength{\parindent}{0pt}
+    \hypersetup{colorlinks, linkcolor={blue}}
+
+    %Exercise subproblems
+    \setlist[enumerate, 1]{label = \textbf{\alph*.}}
+
+    %Line-by-line solutions
+    \newlist{linebyline}{enumerate}{5}
+    \setlist[linebyline]{nosep, labelsep=2em, labelwidth=0em}
+    \setlist[linebyline, 1]{label=\color{linebylinecolor}\arabic{linebylinei}.}
+    \setlist[linebyline, 2]{label=\color{linebylinecolor}\arabic{linebylinei}.\arabic{linebylineii}.}
+    \setlist[linebyline, 3]{label=\color{linebylinecolor}\arabic{linebylinei}.\arabic{linebylineii}.\arabic{linebylineiii}.}
+    \setlist[linebyline, 4]{label=\color{linebylinecolor}\arabic{linebylinei}.\arabic{linebylineii}.\arabic{linebylineiii}.\arabic{linebylineiv}.}
+    \setlist[linebyline, 5]{label=\color{linebylinecolor}\arabic{linebylinei}.\arabic{linebylineii}.\arabic{linebylineiii}.\arabic{linebylineiv}.}
+
+    % TikZ
+    \usetikzlibrary{positioning}
+    \usetikzlibrary{fit}
+
+% Environments
+
+    \newenvironment{q}
+        {\begin{bfseries}\boldmath}
+        {\end{bfseries}}
+
+    \newenvironment{ans}
+        {\begin{textnormal}{\emph{Answer.}}}
+        {\end{textnormal}}
+
+    \newenvironment{xx}
+        {\color{red}}
+
+% Main
+\begin{document}
+\mainfiletrue
+\chapfilefalse
+
+\maketitle
+
+\tableofcontents
+\newpage
+
+\subfile{Chapters/Introduction.tex}
+
+\end{document}
